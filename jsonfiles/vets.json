@@ -1,0 +1,74 @@
+{
+    "vets": [
+    {
+        "name": "Advanced VetCare",
+        "address": "18 Jalan Pari Burong, Picardy Gardens",
+        "contact": 66975322,
+        "latitude": 1.33381785464808, 
+        "longtitude": 103.94914145805537
+    },
+    {
+        "name": "Companion Animal Surgery",
+        "address": "12 Boon Teck Rd",
+        "contact": 62557950,
+        "latitude": 1.326352914426197, 
+        "longtitude": 103.85013176573092
+    },
+    {
+        "name": "Veterinary Emergency & Specialty Hospital",
+        "address": "2-14 Rochdale Road",
+        "contact": 65817028,
+        "latitude": 1.3434346756512578, 
+        "longtitude": 103.88458270381489
+    },
+    {
+        "name": "Stars Veterinary Clinic",
+        "address": "Block 211 Hougang Street 21, #01-301",
+        "contact": 62809880,
+        "latitude": 1.4642036315025686,
+        "longtitude": 103.88851480381491
+    },
+    {
+        "name": "Animal Recovery Veterinary Referral Center",
+        "address": "466 Serangoon Road",
+        "contact": 62522623,
+        "latitude": 1.314093265668179, 
+        "longtitude": 103.85783741545836
+    },
+    {
+        "name": "United Veterinary Clinic Pte Ltd",
+        "address": "Blk 107 Ang Mo Kio Ave 4, #01-148",
+        "contact": 66904720,
+        "latitude": 1.3332706248519737, 
+        "longtitude": 103.83813125593717
+    },
+    {
+        "name": "Mount Pleasant Vet Centre (Gelenggang)",
+        "address": "2 Jalan Gelenggang",
+        "contact": 62517666,
+        "latitude": 1.3733579398486495,
+        "longtitude": 103.83039199641614
+    },
+    {
+        "name": "The Pet Doctors",
+        "address": "3 Chempaka Block, Pandan Valley Condominium #01-311, Pandan Valley",
+        "contact": 64387779,
+        "latitude": 1.3202390967738955, 
+        "longtitude": 103.77991992340228
+    },
+    {
+        "name": "The Visiting Vets",
+        "address": "9 Taman Serasi, #01-09 Botanic Gardens View",
+        "contact": 64753405,
+        "latitude": 1.3085895937783523, 
+        "longtitude": 103.81970678477299
+    },
+    {
+        "name": "Pet’s Avenue Veterinary Clinic",
+        "address": "8 Empress Rd, #01-11",
+        "contact": 64710111,
+        "latitude": 1.3209242633521887, 
+        "longtitude": 103.81526428908097 
+    }
+    ]   
+}

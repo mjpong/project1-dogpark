@@ -2,7 +2,7 @@
     "dog_parks": [
     {
         "name": "Bishan Ang Mo Kio Park Dog Run",
-        "address": "1384 Ang Mo Kio Ave 1, Singapore",
+        "address": "1384 Ang Mo Kio Ave 1",
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "latitude": 1.3626223091515595, 
@@ -10,7 +10,7 @@
     },
     {
         "name": "Bishan Summit Dog Park",
-        "address": "119 Bishan Street 12, Singapore 570119",
+        "address": "119 Bishan Street 12",
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "latitude": 1.3626223091515595, 
@@ -18,7 +18,7 @@
     },
     {
         "name": "Tampines Central Park Dog Run",
-        "address": "Block 856 Tampines Street 82, Singapore 520856",
+        "address": "Block 856 Tampines Street 82",
         "hours": "10am - 10pm",
         "lighting": "Until 10pm",
         "latitude": 1.358175613376079,
@@ -50,7 +50,7 @@
     },
     {
         "name": "Punggol Park Dog Run",
-        "address": "532471, 471B Upper Serangoon Cres",
+        "address": "471B Upper Serangoon Cres",
         "hours": "24/7",
         "lighting": "7pm - 7am",
         "latitude": 1.3815770340601323,  
