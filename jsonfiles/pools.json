@@ -1,0 +1,104 @@
+{
+    "dog_pools": [
+        {
+        "outdoor_pools": [
+            {
+                "name": "Sunny Heights",
+                "address": "110 Turf Club Road",
+                "price": 18,
+                "hours": "8am - 6pm",
+                "latitude": 1.3381462118958838, 
+                "longtitude": 103.80338287754512
+            },
+            {
+                "name": "The Wagington Bone Pool",
+                "address": "27B Loewen Road",
+                "price": 22,
+                "hours": "8am - 7pm",
+                "latitude": 1.3070145317693231, 
+                "longtitude": 103.81923478503572
+            },
+            {
+                "name": "Wag & Wild",
+                "address": "2 Jurong Gateway Road, #01-13",
+                "price": 28,
+                "hours": "10am - 7pm",
+                "latitude": 1.3368999950982052, 
+                "longtitude": 103.74625304244435
+            }
+        ],
+
+        "indoor_pools": [
+            {
+                "name": "The Naked Pet",
+                "address": "1P Figaro Street",
+                "price": 15,
+                "hours": "11am - 6pm",
+                "latitude": 1.316124579231091, 
+                "longtitude": 103.92668563504569
+            },
+            {
+                "name": "Sun Petgamart",
+                "address": "18 Sungei Kadut Street 2",
+                "price": 38,
+                "hours": "10am - 7pm",
+                "latitude": 1.4129879639044798, 
+                "longtitude": 103.74791580436015
+            },
+            {
+                "name": "Pet Stop",
+                "address": "800 Upper Serangoon Road",
+                "price": 10,
+                "hours": "11am - 8pm",
+                "latitude": 1.355429367375168, 
+                "longtitude": 103.88020177552454
+            },
+            {
+                "name": "Wagging Tails N Playful Paws",
+                "address": "40 Yio Chu Kang Rd",
+                "price": 46,
+                "hours": "8am - 7pm",
+                "latitude": 1.3571375672073558, 
+                "longtitude": 103.87621886203152
+            }
+        ],
+
+        "hydrotherapy_pools": [
+            {
+                "name": "Hydro Paws Plus",
+                "address": "3 Kalidasa Ave",
+                "price": 75,
+                "hours": "10am - 6pm",
+                "latitude": 1.3821991600493115, 
+                "longtitude": 103.83194317300443
+            },
+            {
+                "name": "Canine Wellness and Rehab Center",
+                "address": "12 Jalan Gelenggang, Sembawang Hills Estate",
+                "price": 65,
+                "hours": "10am - 4pm",
+                "latitude": 1.3734953398355954, 
+                "longtitude": 103.83063173689521
+            },
+            {
+                "name": "Barker and Pooch",
+                "address": "224, Telok Kurau Road, Uni Building #01-05",
+                "price": 58,
+                "hours": "10am - 7pm",
+                "latitude": 1.3116722757044263, 
+                "longtitude": 103.91172864799327 
+            },
+            {
+                "name": "Hydro Canine",
+                "address": "154 Joo Chiat Rd",
+                "price": 55,
+                "hours": "9am - 5pm",
+                "latitude": 1.3142799981357598, 
+                "longtitude": 103.90299584372747
+            }
+
+        ] 
+        }
+    ]
+    
+}
