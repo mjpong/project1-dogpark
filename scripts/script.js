@@ -14,13 +14,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //demo access token
 }).addTo(map);
 
-// CUSTOM ICON ON MAP
+// CUSTOM ICON MARKER ON MAP
 let pinIcon = L.icon({
     iconUrl: 'images/map-pin.svg',
     iconSize:     [18, 45], // size of the icon
-    iconAnchor:   [23.5,47], // point of the icon which will correspond to marker's location
+    iconAnchor:   [23.5,45], // point of the icon which will correspond to marker's location
     
 });
 
-L.marker([1.29, 103.85], {icon: pinIcon}).addTo(map);
 
