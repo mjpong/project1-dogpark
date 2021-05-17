@@ -3,6 +3,7 @@
     {
         "name": "Bishan Ang Mo Kio Park Dog Run",
         "address": "1384 Ang Mo Kio Ave 1",
+        "area": "North",
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "latitude": 1.3626223091515595, 
@@ -11,6 +12,7 @@
     {
         "name": "Bishan Summit Dog Park",
         "address": "119 Bishan Street 12",
+        "area": "Central",
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "latitude": 1.3626223091515595, 
@@ -19,6 +21,7 @@
     {
         "name": "Tampines Central Park Dog Run",
         "address": "Block 856 Tampines Street 82",
+        "area": "East",
         "hours": "10am - 10pm",
         "lighting": "Until 10pm",
         "latitude": 1.358175613376079,
@@ -27,6 +30,7 @@
     {
         "name": "Sebawang Dog Run",
         "address": "Sembawang Rd, Singapore",
+        "area": "North",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.4642036315025686,
@@ -35,6 +39,7 @@
     {
         "name": "Yishun Park Dog Run",
         "address": "Yishun Ave 4, Yishun Central, Yishun Ave 11 and Yishun Ring Road",
+        "area": "North",
         "hours": "24/7",
         "lighting": "7pm - 7am",
         "latitude": 1.4294822462314574,
@@ -43,6 +48,7 @@
     {
         "name": "Potong Pasir Ave 1 Dog Run",
         "address": "Block 102 Potong Pasir Avenue 1",
+        "area": "Central",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3332706248519737, 
@@ -51,6 +57,7 @@
     {
         "name": "Punggol Park Dog Run",
         "address": "471B Upper Serangoon Cres",
+        "area": "Northeast",
         "hours": "24/7",
         "lighting": "7pm - 7am",
         "latitude": 1.3815770340601323,  
@@ -59,6 +66,7 @@
     {
         "name": "Pasir Ris Street 51 Dog Run",
         "address": "Pasir Ris Street 51",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.368662268108972,
@@ -67,6 +75,7 @@
     {
         "name": "Mariam Way Dog Run",
         "address": "377 Old Tampines Rd",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.366431305078297,
@@ -75,6 +84,7 @@
     {
         "name": "Interim Park Dog Run",
         "address": "Lengkong Enam, Interim Park",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3309099300154223, 
@@ -83,6 +93,7 @@
     {
         "name": "Bedok Town Park Dog Run",
         "address": "Bedok North Ave 3",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3359005913903679,
@@ -91,6 +102,7 @@
     {
         "name": "Tiong Bahru Dog Run",
         "address": "3A Sit Wah Road",
+        "area": "Central",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.286768144084842, 
@@ -99,6 +111,7 @@
     {
         "name": "Clementi Woods Park Dog Run",
         "address": "Clementi Woods Park, West Coast Rd",
+        "area": "West",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3070184473838926, 
@@ -107,6 +120,7 @@
     {
         "name": "Koon Seng Park Dog Run",
         "address": "Intersection of Koon Seng Road and Tembeling Road",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3111320476810617,
@@ -115,6 +129,7 @@
     {
         "name": "Jurong Lake Park Dog Run",
         "address": "Yuan Ching Road and Japanese Garden Road",
+        "area": "West",
         "hours": "9am - 10pm",
         "lighting": "N/A",
         "latitude": 1.3337629981654435, 
@@ -123,6 +138,7 @@
     {
         "name": "West Coast Park Dog Run",
         "address": "Yuan Ching Road and Japanese Garden Road",
+        "area": "West",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.2909314721638643, 
@@ -131,6 +147,7 @@
     {
         "name": "Holland Village Dog Run",
         "address": "Blk 31A Holland Ave",
+        "area": "Central",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3126338253601726, 
@@ -139,6 +156,7 @@
     {
         "name": "Katong Park Dog Run",
         "address": "Katong Park",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.2966686512880863,
@@ -147,6 +165,7 @@
     {
         "name": "East Coast Park Dog Run",
         "address": "E Coast Park Service Rd",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3012615480351248, 
@@ -155,6 +174,7 @@
     {
         "name": "Our Space @ Tai Gin",
         "address": "16 Tai Gin Rd",
+        "area": "Central",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3288101528987881, 
@@ -163,6 +183,7 @@
     {
         "name": "Sunny Heights Dog Park",
         "address": "110 Turf Club Road",
+        "area": "West",
         "hours": "1pm - 6pm",
         "lighting": "N/A",
         "latitude": 1.3288101528987881, 
@@ -171,6 +192,7 @@
     {
         "name": "Simpang Bedok Dog Run",
         "address": "Jalan Pari Burong playground, 91 Jln Pari Burong",
+        "area": "East",
         "hours": "24/7",
         "lighting": "N/A",
         "latitude": 1.3344575724350702, 

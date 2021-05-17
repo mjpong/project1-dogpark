@@ -1,4 +1,4 @@
-body {
-    background-color: red;
-}
-
+#map {
+    height: 500px;
+    background: grey;
+  }

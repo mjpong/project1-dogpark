@@ -5,6 +5,7 @@
             {
                 "name": "Sunny Heights",
                 "address": "110 Turf Club Road",
+                "area": "West",
                 "price": 18,
                 "hours": "8am - 6pm",
                 "latitude": 1.3381462118958838, 
@@ -13,6 +14,7 @@
             {
                 "name": "The Wagington Bone Pool",
                 "address": "27B Loewen Road",
+                "area": "Central",
                 "price": 22,
                 "hours": "8am - 7pm",
                 "latitude": 1.3070145317693231, 
@@ -21,6 +23,7 @@
             {
                 "name": "Wag & Wild",
                 "address": "2 Jurong Gateway Road, #01-13",
+                "area": "West",
                 "price": 28,
                 "hours": "10am - 7pm",
                 "latitude": 1.3368999950982052, 
@@ -32,6 +35,7 @@
             {
                 "name": "The Naked Pet",
                 "address": "1P Figaro Street",
+                "area": "East",
                 "price": 15,
                 "hours": "11am - 6pm",
                 "latitude": 1.316124579231091, 
@@ -48,6 +52,7 @@
             {
                 "name": "Pet Stop",
                 "address": "800 Upper Serangoon Road",
+                "area": "North",
                 "price": 10,
                 "hours": "11am - 8pm",
                 "latitude": 1.355429367375168, 
@@ -56,6 +61,7 @@
             {
                 "name": "Wagging Tails N Playful Paws",
                 "address": "40 Yio Chu Kang Rd",
+                "area": "Northeast",
                 "price": 46,
                 "hours": "8am - 7pm",
                 "latitude": 1.3571375672073558, 
@@ -67,6 +73,7 @@
             {
                 "name": "Hydro Paws Plus",
                 "address": "3 Kalidasa Ave",
+                "area": "North",
                 "price": 75,
                 "hours": "10am - 6pm",
                 "latitude": 1.3821991600493115, 
@@ -75,6 +82,7 @@
             {
                 "name": "Canine Wellness and Rehab Center",
                 "address": "12 Jalan Gelenggang, Sembawang Hills Estate",
+                "area": "North",
                 "price": 65,
                 "hours": "10am - 4pm",
                 "latitude": 1.3734953398355954, 
@@ -83,6 +91,7 @@
             {
                 "name": "Barker and Pooch",
                 "address": "224, Telok Kurau Road, Uni Building #01-05",
+                "area": "East",
                 "price": 58,
                 "hours": "10am - 7pm",
                 "latitude": 1.3116722757044263, 
@@ -91,6 +100,7 @@
             {
                 "name": "Hydro Canine",
                 "address": "154 Joo Chiat Rd",
+                "area": "East",
                 "price": 55,
                 "hours": "9am - 5pm",
                 "latitude": 1.3142799981357598, 
