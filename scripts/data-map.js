@@ -1,5 +1,20 @@
 // BOTH PARK + POOL DATA MAP WILL BE DONE HERE
 
+// CUSTOM ICON MARKER ON MAP
+var parkPin = L.icon({
+    iconUrl: 'images/park-pin.svg',
+    iconSize:     [15, 42], // size of the icon
+    iconAnchor:   [22.5,42], // point of the icon which will correspond to marker's location
+    
+});
+
+var poolPin = L.icon({
+    iconUrl: 'images/pool-pin.svg',
+    iconSize:     [15, 42], // size of the icon
+    iconAnchor:   [22.5,42], // point of the icon which will correspond to marker's location
+    
+});
+
 // USE AXIOS TO READ FROM PARKS.JSON, TELL JS TO WAIT TILL AXIOS.GET() IS DONE
 // ASSIGN IT'S RESPONSE TO THE RESPONSE VARIABLE
 
@@ -9,8 +24,6 @@ async function getParks() {
     console.log(allParks);
     let parksLatLong = [];
     for (let park of allParks.dog_parks) {
-    // console.log(park.latitude)
-    // console.log(park.longtitude)
         parksLatLong.push([park.latitude, park.longtitude]);
     }
     createMarkers(parksLatLong);
@@ -22,12 +35,14 @@ function createMarkers(parkCoor){
     let parkClusterLayer = L.markerClusterGroup();
 
     for (let i = 0; i < parkCoor.length; i++) {
-        L.marker(parkCoor[i]).addTo(parkClusterLayer)
+        L.marker(parkCoor[i],{icon: parkPin}).addTo(parkClusterLayer)
     }
     // adding the parkMarkers to map
     parkClusterLayer.addTo(map);
 }
 
+// CALLING PARK MARKERS
+getParks();
 
 
 
