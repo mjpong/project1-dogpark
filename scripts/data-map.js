@@ -30,22 +30,34 @@ async function getParks() {
     
 }
 
-// ADDING PARKS.JSON LATLNG TO MARKER CLUSTER
-function createMarkers(parkCoor){
-    let parkClusterLayer = L.markerClusterGroup();
-
-    for (let i = 0; i < parkCoor.length; i++) {
-        L.marker(parkCoor[i],{icon: parkPin}).addTo(parkClusterLayer)
-    }
-    // adding the parkMarkers to map
-    parkClusterLayer.addTo(map);
-}
-
-// CALLING PARK MARKERS
 getParks();
 
 
+// USE AXIOS TO READ FROM POOLS.JSON, TELL JS TO WAIT TILL AXIOS.GET() IS DONE
+// ASSIGN IT'S RESPONSE TO THE RESPONSE VARIABLE
+async function getPools(){
+    let response = await axios.get("../json-files/pools.json");
+    let allPools = response.data;
+    console.log(allPools);
+    let poolsLatLong = []; 
+    for (let pool of allPools.dog_pools) {
+        poolsLatLong.push([pool.latitude, pool.longtitude]);
+    }
+    createMarkers(poolsLatLong);
+}
 
+getPools();
+
+// ADDING POOLS AND PARKS.JSON LATLNG TO MARKER CLUSTER
+function createMarkers(coor){
+    let clusterLayer = L.markerClusterGroup();
+
+    for (let i = 0; i < coor.length; i++) {
+        L.marker(coor[i],{icon: parkPin}).addTo(clusterLayer)
+    }
+    // adding the parkMarkers to map
+    clusterLayer.addTo(map);
+}
 
 
 

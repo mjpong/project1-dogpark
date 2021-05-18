@@ -1,7 +1,5 @@
 {
     "dog_pools": [
-        {
-        "outdoor_pools": [
             {
                 "name": "Sunny Heights",
                 "address": "110 Turf Club Road",
@@ -9,7 +7,8 @@
                 "price": 18,
                 "hours": "8am - 6pm",
                 "latitude": 1.3381462118958838, 
-                "longtitude": 103.80338287754512
+                "longtitude": 103.80338287754512,
+                "type": "Outdoor Pool"
             },
             {
                 "name": "The Wagington Bone Pool",
@@ -18,7 +17,8 @@
                 "price": 22,
                 "hours": "8am - 7pm",
                 "latitude": 1.3070145317693231, 
-                "longtitude": 103.81923478503572
+                "longtitude": 103.81923478503572,
+                "type": "Outdoor Pool"
             },
             {
                 "name": "Wag & Wild",
@@ -27,11 +27,9 @@
                 "price": 28,
                 "hours": "10am - 7pm",
                 "latitude": 1.3368999950982052, 
-                "longtitude": 103.74625304244435
-            }
-        ],
-
-        "indoor_pools": [
+                "longtitude": 103.74625304244435,
+                "type": "Outdoor Pool"
+            },
             {
                 "name": "The Naked Pet",
                 "address": "1P Figaro Street",
@@ -39,7 +37,8 @@
                 "price": 15,
                 "hours": "11am - 6pm",
                 "latitude": 1.316124579231091, 
-                "longtitude": 103.92668563504569
+                "longtitude": 103.92668563504569,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Sun Petgamart",
@@ -47,7 +46,8 @@
                 "price": 38,
                 "hours": "10am - 7pm",
                 "latitude": 1.4129879639044798, 
-                "longtitude": 103.74791580436015
+                "longtitude": 103.74791580436015,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Pet Stop",
@@ -56,7 +56,8 @@
                 "price": 10,
                 "hours": "11am - 8pm",
                 "latitude": 1.355429367375168, 
-                "longtitude": 103.88020177552454
+                "longtitude": 103.88020177552454,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Wagging Tails N Playful Paws",
@@ -65,11 +66,9 @@
                 "price": 46,
                 "hours": "8am - 7pm",
                 "latitude": 1.3571375672073558, 
-                "longtitude": 103.87621886203152
-            }
-        ],
-
-        "hydrotherapy_pools": [
+                "longtitude": 103.87621886203152,
+                "type": "Indoor Pool"
+            },
             {
                 "name": "Hydro Paws Plus",
                 "address": "3 Kalidasa Ave",
@@ -77,7 +76,8 @@
                 "price": 75,
                 "hours": "10am - 6pm",
                 "latitude": 1.3821991600493115, 
-                "longtitude": 103.83194317300443
+                "longtitude": 103.83194317300443,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Canine Wellness and Rehab Center",
@@ -86,7 +86,8 @@
                 "price": 65,
                 "hours": "10am - 4pm",
                 "latitude": 1.3734953398355954, 
-                "longtitude": 103.83063173689521
+                "longtitude": 103.83063173689521,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Barker and Pooch",
@@ -95,7 +96,8 @@
                 "price": 58,
                 "hours": "10am - 7pm",
                 "latitude": 1.3116722757044263, 
-                "longtitude": 103.91172864799327 
+                "longtitude": 103.91172864799327,
+                "type": "Indoor Pool"
             },
             {
                 "name": "Hydro Canine",
@@ -104,11 +106,9 @@
                 "price": 55,
                 "hours": "9am - 5pm",
                 "latitude": 1.3142799981357598, 
-                "longtitude": 103.90299584372747
+                "longtitude": 103.90299584372747,
+                "type": "Indoor Pool"
             }
-
-        ] 
-        }
     ]
     
 }
