@@ -26,8 +26,8 @@ async function getParks() {
     for (let park of allParks.dog_parks) {
         parksLatLong.push([park.latitude, park.longtitude]);
     }
-    createMarkers(parksLatLong);
-    
+
+    createMarkers(parksLatLong, parkPin);
 }
 
 getParks();
@@ -43,23 +43,22 @@ async function getPools(){
     for (let pool of allPools.dog_pools) {
         poolsLatLong.push([pool.latitude, pool.longtitude]);
     }
-    createMarkers(poolsLatLong);
+    createMarkers(poolsLatLong, poolPin);
 }
 
-getPools();
 
 // ADDING POOLS AND PARKS.JSON LATLNG TO MARKER CLUSTER
-function createMarkers(coor){
+function createMarkers(coor, pin){
     let clusterLayer = L.markerClusterGroup();
 
     for (let i = 0; i < coor.length; i++) {
-        L.marker(coor[i],{icon: parkPin}).addTo(clusterLayer)
+        L.marker(coor[i],{icon: pin}).addTo(clusterLayer)
     }
     // adding the parkMarkers to map
     clusterLayer.addTo(map);
 }
 
-
+getPools();
 
 
 
