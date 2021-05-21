@@ -28,7 +28,7 @@ async function getParks() {
     }
     let parkClusterLayer = L.markerClusterGroup();
 
-    createMarkers(parksLatLong, parkPin, parkClusterLayer);
+    createMarkers(parksLatLong, parkPin, parkClusterLayer).addTo(parkGroup);
 }
 
 
@@ -45,10 +45,8 @@ async function getPools(){
     let poolClusterLayer = L.markerClusterGroup();
 
 
-    createMarkers(poolsLatLong, poolPin, poolClusterLayer);
+    createMarkers(poolsLatLong, poolPin, poolClusterLayer).addTo(poolGroup);
 }
-
-
 
 // ADDING MARKERS PER LATLONG
 function createMarkers(coor, pin, clusterLayer){
@@ -57,15 +55,58 @@ function createMarkers(coor, pin, clusterLayer){
     }
     // adding the parkMarkers to map
     clusterLayer.addTo(map);
+    return clusterLayer;
 }
+
+// LAYER GROUPS
+let parkGroup = L.layerGroup();
+// createMarkers(parksLatLong, parkPin, parkClusterLayer).addTo(parkGroup);
+parkGroup.addTo(map);
+
+let poolGroup = L.layerGroup();
+// createMarkers(poolsLatLong, poolPin, poolClusterLayer).addTo(poolGroup);
+poolGroup.addTo(map);
+
+
+async function run() {
+
+await getPools();
+await getParks();
+
+
+let baseLayers = {
+    'Dog Parks': parkGroup,
+    'Dog Pools': poolGroup
+
+}
+console.log("test")
+let overlays = {
+    // 'Dog Pools': poolGroup
+}
+
+L.control.layers(baseLayers, overlays).addTo(map);
+
+document.querySelector('#toggle-btn').addEventListener('click', function(){
+            if (map.hasLayer(poolGroup)) {
+                map.removeLayer(poolGroup);
+            } else {
+                  map.addLayer(poolGroup);
+            }
+    })  
+}
+
+run();
 
 //CALLING BOTH POOL AND PARK TO MAP
 
-getPools();
-getParks();
+
 
 
 // // MOBILE ONLY - POPUP ON CLICK 
+// marker.addEventListener('click', function(){
+
+// })
+
 // parkMarker.bindPopup(`
 // <h1>Singapore</h1>
 // <p>Welcome to Singapore, the Green City </p>

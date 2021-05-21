@@ -25,72 +25,45 @@
 
   <body>
     <!-- NAV BAR -->
-    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <div class="container-fluid">
-        <a class="navbar-brand"  href="#">
-          <img src="images/woofday.jpeg" alt="" width="170" height="100" class="mx-auto"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">About Us</a> 
-
-            </li>
-          </ul>
-          <form class="d-flex">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-secondary" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>   -->
     
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
-          <ul class="navbar-nav ml-auto text-center">
-              <li class="nav-item active">
-                  <a class="nav-link" href="#">Link</a>
+    <nav class="navbar navbar-light navbar-expand-md bg-light justify-content-md-center justify-content-start">
+      <a class="navbar-brand d-md-none d-inline" href="">Brand</a>
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#collapsingNavbar2">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="nav-link" href="#_"><i class="fa fa-search mr-1"></i></a> 
+      <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="collapsingNavbar2">
+          <ul class="navbar-nav mx-auto text-md-center text-left">
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a> 
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="#">Link</a>
               </li>
+              <li class="nav-item my-auto">
+                  <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">Brand</a>
+              </li>
               <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Link</a> 
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">Link</a> 
               </li>
           </ul>
-      </div>
-      <div class="mx-auto my-2 order-0 order-md-1 position-relative">
-          <a class="mx-auto" href="#">
-              <img src="/images/woofday.jpeg" width="170" height="100" class="rounded-circle">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-      </div>
-      <div class="navbar-collapse collapse w-100 dual-collapse2 order-2 order-md-2">
-          <ul class="navbar-nav mr-auto text-center">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
+          <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+              <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-facebook mr-1"></i></a> </li>
+              <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
           </ul>
       </div>
-  </nav>
+    </nav>
+  
 
+    <button id="toggle-btn">Toggle</button>
+    <div id="map">
+       
+    </div>
 
-    <div id="map"></div>
-
-
+    
 
 
 
