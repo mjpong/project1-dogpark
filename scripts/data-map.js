@@ -74,14 +74,17 @@ await getPools();
 await getParks();
 
 
+
 let baseLayers = {
-    'Dog Parks': parkGroup,
-    'Dog Pools': poolGroup
+    // 'Dog Parks': parkGroup,
+    // 'Dog Pools': poolGroup,
 
 }
-console.log("test")
+
 let overlays = {
-    // 'Dog Pools': poolGroup
+    'Dog Parks': parkGroup,
+    'Dog Pools': poolGroup,
+
 }
 
 L.control.layers(baseLayers, overlays).addTo(map);
@@ -95,10 +98,9 @@ document.querySelector('#toggle-btn').addEventListener('click', function(){
     })  
 }
 
-run();
 
 //CALLING BOTH POOL AND PARK TO MAP
-
+run();
 
 
 
