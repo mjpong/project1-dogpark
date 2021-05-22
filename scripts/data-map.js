@@ -78,7 +78,6 @@ await getParks();
 let baseLayers = {
     // 'Dog Parks': parkGroup,
     // 'Dog Pools': poolGroup,
-
 }
 
 let overlays = {
