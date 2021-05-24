@@ -45,19 +45,18 @@
                 </a>
             </li>
             <li class="nav-item" style="display: flex; align-items:center">
-                <a class="nav-link text-center" href="#" style="display: flex; align-items:center;">Contact Us</a> 
+                <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#contactUsModal"style="display: flex; align-items:center;">Contact Us</a> 
             </li>
           </ul>
-          <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+          <!-- <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
               <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-facebook"></i></a> </li>
               <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
-          </ul>
+          </ul> -->
       </div>
     </nav>
     
     <div class ="container-fluid">
         <div class = "row page-header">
-          testing
             <!-- filter button -->
             <button type="button" class="btn btn-outline-primary">
                 <img src="images/filter.svg">
@@ -95,12 +94,12 @@
         </div>
     </div>
 
-    <!-- MODAL -->
-    <div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <!-- About Us Modal -->
+    <div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="aboutUsModalCenterTitle" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">About woofday</h5>
+            <h4 class="modal-title" id="exampleModalLongTitle">About woofday</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -118,6 +117,41 @@
         </div>
       </div>
     </div>
+
+    <!-- Contact Us Modal -->
+  
+    <div id="contactUsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLongTitle">We'd love to hear from you!</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form class="form-horizontal col-sm-12">
+              <div>
+                Email: woof@woofday.com <br>
+                Call: 93582245 <br>
+                Opening hours: Mon - Fri, 10 am - 5 pm <br>
+              </div>
+              <br>
+              Or fill out this form and we will get back to you! <br> <br>
+              <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+              <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+              <div class="form-group"><button type="submit" class="btn btn-success pull-right">Submit</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p></div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <!-- Map -->

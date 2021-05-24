@@ -68,7 +68,7 @@ function createMarkers(coor, pin, clusterLayer){
     return clusterLayer;
 }
 
-//Layers Groups
+// Layers Groups
 
 let parkGroup = L.layerGroup();
 parkGroup.addTo(map);
