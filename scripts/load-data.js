@@ -25,6 +25,7 @@ async function loadParksData() {
             parkAddress: i.address,
             parkArea: i.area,
             parkHours: i.hours,
+            parkPic: i.pic,
             parkLighting: i.lighting,
             parkLatitude: i.latitude,
             parkLongtitude: i.longtitude
@@ -47,6 +48,7 @@ async function loadPoolsData() {
             poolArea: i.area,
             poolPrice: i.price,
             poolHours: i.hours,
+            poolPic: i.pic,
             poolLatitude: i.latitude,
             poolLongtitude: i.longtitude,
             poolType: i.type,
@@ -63,9 +65,11 @@ function createParkMarkers(coor, pin, clusterLayer){
     for (let i = 0; i < coor.length; i++) {
         const parkPopup = L.popup()
         .setContent(`
-        <p>${coor[i].parkName}</p>
-        <p>${coor[i].parkAddress}</p>
-        <p>${coor[i].parkHours}</p>
+        <h6>${coor[i].parkName}</h6>
+        <hr>
+        <p> Address: ${coor[i].parkAddress}</p>
+        <p> Opening Hours: ${coor[i].parkHours}</p>
+        <p> <img src="${coor[i].parkPic}" style="width:300px; height:175px"/> 
         `)
         L.marker([coor[i].parkLatitude, coor[i].parkLongtitude],{icon: pin}).bindPopup(parkPopup).addTo(clusterLayer)
     };
@@ -76,11 +80,13 @@ function createPoolMarkers(coor, pin, clusterLayer){
     for (let i = 0; i < coor.length; i++) {
         const poolPopup = L.popup()
         .setContent(`
-        <p>${coor[i].poolName}</p>
-        <p>${coor[i].poolAddress}</p>
-        <p>${coor[i].poolType}</p>
-        <p>${coor[i].poolPrice}</p>
-        <p>${coor[i].poolHours}</p>
+        <h6>${coor[i].poolName}</h6>
+        <hr>
+        <p> Address: ${coor[i].poolAddress}</p>
+        <p> Pool Type: ${coor[i].poolType}</p>
+        <p> Price: ${coor[i].poolPrice}</p>
+        <p> Opening Hours: ${coor[i].poolHours}</p>
+        <p> <img src="${coor[i].poolPic}" style="width:300px; height:175px"/> 
         `)
         L.marker([coor[i].poolLatitude, coor[i].poolLongtitude],{icon: pin}).bindPopup(poolPopup).addTo(clusterLayer)
     };
@@ -97,19 +103,13 @@ let poolGroup = L.layerGroup();
 poolGroup.addTo(map);
     
 let baseLayers = {
-
-}
-    
+} 
 let overlays = {
     'Dog Parks': parkGroup,
     'Dog Pools': poolGroup,
 }
 
 L.control.layers(baseLayers, overlays).addTo(map);
-
-
-
-
 
 // Run all
 async function run(){
