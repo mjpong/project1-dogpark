@@ -21,13 +21,13 @@ async function loadParksData() {
     let allParksData = [];
     for (let i of parksData.dog_parks) {
         allParksData.push({
-            name: i.name,
-            address: i.address,
-            area: i.area,
-            hours: i.hours,
-            lighting: i.lighting,
-            latitude: i.latitude,
-            longtitude: i.longtitude
+            parkName: i.name,
+            parkAddress: i.address,
+            parkArea: i.area,
+            parkHours: i.hours,
+            parkLighting: i.lighting,
+            parkLatitude: i.latitude,
+            parkLongtitude: i.longtitude
         })
        
     }
@@ -42,14 +42,14 @@ async function loadPoolsData() {
     let allPoolsData = [];
     for (let i of poolsData.dog_pools) {
         allPoolsData.push({
-            name: i.name,
-            address: i.address,
-            area: i.area,
-            price: i.price,
-            hours: i.hours,
-            latitude: i.latitude,
-            longtitude: i.longtitude,
-            type: i.type,
+            poolName: i.name,
+            poolAddress: i.address,
+            poolArea: i.area,
+            poolPrice: i.price,
+            poolHours: i.hours,
+            poolLatitude: i.latitude,
+            poolLongtitude: i.longtitude,
+            poolType: i.type,
         })
        
     }
@@ -59,14 +59,34 @@ async function loadPoolsData() {
 
 // Marker function
 
-function createMarkers(coor, pin, clusterLayer){
+function createParkMarkers(coor, pin, clusterLayer){
     for (let i = 0; i < coor.length; i++) {
-        L.marker([coor[i].latitude, coor[i].longtitude],{icon: pin}).addTo(clusterLayer)
-    }
-    // adding the markers to map
-    // clusterLayer.addTo(map);
+        const parkPopup = L.popup()
+        .setContent(`
+        <p>${coor[i].parkName}</p>
+        <p>${coor[i].parkAddress}</p>
+        <p>${coor[i].parkHours}</p>
+        `)
+        L.marker([coor[i].parkLatitude, coor[i].parkLongtitude],{icon: pin}).bindPopup(parkPopup).addTo(clusterLayer)
+    };
     return clusterLayer;
 }
+
+function createPoolMarkers(coor, pin, clusterLayer){
+    for (let i = 0; i < coor.length; i++) {
+        const poolPopup = L.popup()
+        .setContent(`
+        <p>${coor[i].poolName}</p>
+        <p>${coor[i].poolAddress}</p>
+        <p>${coor[i].poolType}</p>
+        <p>${coor[i].poolPrice}</p>
+        <p>${coor[i].poolHours}</p>
+        `)
+        L.marker([coor[i].poolLatitude, coor[i].poolLongtitude],{icon: pin}).bindPopup(poolPopup).addTo(clusterLayer)
+    };
+    return clusterLayer;
+}
+
 
 // Layers Groups
 
@@ -88,18 +108,26 @@ let overlays = {
 L.control.layers(baseLayers, overlays).addTo(map);
 
 
+
+
+
 // Run all
 async function run(){
     let parksData = await loadParksData()
     console.log(parksData)
     let parkClusterLayer = L.markerClusterGroup();
-    createMarkers(parksData, parkPin, parkClusterLayer).addTo(parkGroup)
+    createParkMarkers(parksData, parkPin, parkClusterLayer).addTo(parkGroup)
 
     let poolsData = await loadPoolsData()
     console.log(poolsData)
     let poolClusterLayer = L.markerClusterGroup();
-    createMarkers(poolsData, poolPin, poolClusterLayer).addTo(poolGroup)
+    createPoolMarkers(poolsData, poolPin, poolClusterLayer).addTo(poolGroup)
     
 }
 
+
+
+
 run();
+
+
