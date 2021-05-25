@@ -69,7 +69,7 @@ function createParkMarkers(coor, pin, clusterLayer){
         <hr>
         <p> Address: ${coor[i].parkAddress}</p>
         <p> Opening Hours: ${coor[i].parkHours}</p>
-        <p> <img src="${coor[i].parkPic}" style="width:300px; height:175px"/> 
+        <p> <img src="${coor[i].parkPic}" style="width:275px; height:150px"/> 
         `)
         L.marker([coor[i].parkLatitude, coor[i].parkLongtitude],{icon: pin}).bindPopup(parkPopup).addTo(clusterLayer)
     };
@@ -84,9 +84,9 @@ function createPoolMarkers(coor, pin, clusterLayer){
         <hr>
         <p> Address: ${coor[i].poolAddress}</p>
         <p> Pool Type: ${coor[i].poolType}</p>
-        <p> Price: ${coor[i].poolPrice}</p>
+        <p> Price: $${coor[i].poolPrice}</p>
         <p> Opening Hours: ${coor[i].poolHours}</p>
-        <p> <img src="${coor[i].poolPic}" style="width:300px; height:175px"/> 
+        <p> <img src="${coor[i].poolPic}" style="width:275px; height:150px"/> 
         `)
         L.marker([coor[i].poolLatitude, coor[i].poolLongtitude],{icon: pin}).bindPopup(poolPopup).addTo(clusterLayer)
     };

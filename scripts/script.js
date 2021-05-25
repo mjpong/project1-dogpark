@@ -1,8 +1,8 @@
 // ADDING BASE MAP
 
 // SINGAPORE LATLONG + SETVIEW CENTER POINT
-let singapore = [1.29,103.85]; 
-let map = L.map('map').setView(singapore, 13); 
+let singapore = [1.3141086427175888, 103.83809046978706]; 
+let map = L.map('map').setView(singapore, 12.4); 
 
 // TILE LAYERS 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -14,7 +14,12 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //demo access token
 }).addTo(map);
 
-
+// Reset Map
+document.querySelector("#reset").addEventListener("click", () => {
+    clearField();
+    displayCards();
+    checksExistingLayer();
+})
 // ADDING FILTER / SEARCH BAR
 
 

@@ -1,0 +1,80 @@
+ <!-- Header Container -->
+ <div class ="container-fluid">
+    <div class = "row page-header">
+        <!-- filter button -->
+        <button type="button" class="btn btn-outline-primary" id="filter-btn" data-toggle="collapse" data-target="#filterOptions">
+            <img src="images/filter.svg">
+            Filter
+        </button>
+        <!-- search -->
+        <div class = "container d-block">
+          <div class="col-12 col-md-10 col-lg-8">
+            <div class="row justify-content-center">
+              <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm">
+                  <div class="card-body row no-gutters align-items-center">
+                    <div class="col-auto">
+                      <i class="fas fa-search h4 text-body"></i>
+                    </div>
+                    <!--end of col-->
+                    <div class="col">
+                      <input class="form-control form-control form-control-borderless" type="search" placeholder="Search">
+                    </div>
+                    <!--end of col-->
+                    <div class="col-auto">
+                      <button class="btn btn-success" type="submit">Search</button>
+                    </div>
+                    <!--end of col-->
+                  </div>
+                </form>
+              </div>
+              <!--end of col-->
+            </div>
+          </div>
+        <!--end of col-->
+        </div>
+        <div class="searchResult"></div>
+  
+    </div>
+</div>
+
+
+
+<!-- SEARCH + FILTER -->
+<div class="container">
+  <div class="row searchFilter" >
+     <div class="col-sm-12" >
+      <div class="input-group" >
+       <input id="tableFilter" type="text" class="form-control" aria-label="Text input with segmented button dropdown" >
+       <div class="input-group-btn" >
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><span class="label-icon" >Category</span> <span class="caret" >&nbsp;</span></button>
+        <div class="dropdown-menu dropdown-menu-right" >
+           <ul class="category_filters" >
+            <li >
+             <input class="cat_type category-input" data-label="All" id="all" value="" name="radios" type="radio" ><label for="all" >All</label>
+            </li>
+            <li >
+             <input type="radio" name="radios" id="Dog Parks" value="Dog Parks" ><label class="category-label" for="Dog Parks" >Dog Parks</label>
+            </li>
+            <li >
+             <input type="radio" name="radios" id="Dog Pools" value="Dog Pools" ><label class="category-label" for="Dog Pools" >Dog Pools</label>
+            </li>
+            <li >
+             <input type="radio" name="radios" id="Region" value="Region" ><label class="category-label" for="Region" >Region</label>
+            </li>
+            <li >
+             <input type="radio" name="radios" id="Hours" value="Hours" ><label class="category-label" for="Hours" >Hours</label>
+            </li>
+            <li >
+             <input type="radio" name="radios" id="Support" value="Support" ><label class="category-label" for="Support" >Support</label>
+            </li>
+           </ul>
+        </div>
+        <button id="searchBtn" type="button" class="btn btn-secondary btn-search" ><span class="glyphicon glyphicon-search" >&nbsp;</span> <span class="label-icon" >Search</span></button>
+       </div>
+      </div>
+     </div>
+  </div>
+</div>
+</div>
+</div>
