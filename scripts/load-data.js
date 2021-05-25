@@ -13,12 +13,15 @@ const poolPin = L.icon({
 
 });
 
+// Global Variable
+let allParksData = [];
+let allPoolsData = [];
+
 // AXIOS just to read the park data
 async function loadParksData() {
     let response = await axios.get("../json-files/parks.json");
     let parksData = response.data;
     console.log(parksData)
-    let allParksData = [];
     for (let i of parksData.dog_parks) {
         allParksData.push({
             parkName: i.name,
@@ -40,7 +43,6 @@ async function loadPoolsData() {
     let response = await axios.get("../json-files/pools.json");
     let poolsData = response.data;
     console.log(poolsData)
-    let allPoolsData = [];
     for (let i of poolsData.dog_pools) {
         let typeStr = i.type.toString().replace(",", ", ")
         allPoolsData.push({

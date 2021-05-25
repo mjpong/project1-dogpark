@@ -15,13 +15,24 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 // Reset Map
-document.querySelector("#reset").addEventListener("click", () => {
-    clearField();
-    displayCards();
-    checksExistingLayer();
+// document.querySelector("#reset").addEventListener("click", () => {
+
+// })
+
+
+// document.getElementById("nav-toggle").addEventListener('click', function(e){
+
+    
+//     if(document.getElementById("myTabContent").style.display == 'none'){
+//         e.target.innerHTML = "O";
+//         document.getElementById("myTabContent").style.display = 'block'
+//     } else {
+//         e.target.innerHTML = "T";
+//         document.getElementById("myTabContent").style.display = 'none'
+//     }
+// })
+
+$('#nav-toggle').click(function(){
+    $('#myTabContent').slideToggle()
+    $('#nav-toggle i').toggleClass('fa-rotate-180')
 })
-// ADDING FILTER / SEARCH BAR
-
-
-
-
