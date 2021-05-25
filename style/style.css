@@ -1,6 +1,12 @@
+/* body {
+  font-size: 2em;
+} */
+
 #map {
-    height: 500px;
+    height: 100vh;
     background: grey;
+    z-index:700;
+    position: fixed;
   }
 
   .page-header {
@@ -9,4 +15,19 @@
     background-color: rgba(145, 158, 250, 0.75);
  }
 
+ #info-side-bar{
+  background-color: white;
+  z-index: 1030;
+  position: absolute;
+  right:20px;
+  top:20px;
+}
+
+#search-bar {
+  min-width: 200px;
+}
+
+#search-bar-wrapper{
+  min-height: 350px;
+}
  /* Mobile Map */

@@ -9,7 +9,7 @@
                 "pic": "../images/pool/pool4.jpeg",
                 "latitude": 1.3381462118958838, 
                 "longtitude": 103.80338287754512,
-                "type": "Outdoor Pool"
+                "type": ["Outdoor Pool"]
             },
             {
                 "name": "The Wagington Bone Pool",
@@ -20,7 +20,7 @@
                 "pic": "../images/pool/pool8.jpeg",
                 "latitude": 1.3070145317693231, 
                 "longtitude": 103.81923478503572,
-                "type": "Outdoor Pool"
+                "type": ["Outdoor Pool"]
             },
             {
                 "name": "Wag & Wild",
@@ -31,7 +31,7 @@
                 "pic": "../images/pool/pool3.jpeg",
                 "latitude": 1.3368999950982052, 
                 "longtitude": 103.74625304244435,
-                "type": "Outdoor Pool"
+                "type": ["Outdoor Pool"]
             },
             {
                 "name": "The Naked Pet",
@@ -42,17 +42,18 @@
                 "pic": "../images/pool/pool2.jpeg",
                 "latitude": 1.316124579231091, 
                 "longtitude": 103.92668563504569,
-                "type": "Indoor Pool"
+                "type": ["Indoor Pool"]
             },
             {
                 "name": "Sun Petgamart",
                 "address": "18 Sungei Kadut Street 2",
+                "area": "North",
                 "price": 38,
                 "hours": "10am - 7pm",
                 "pic": "../images/pool/pool6.jpeg",
                 "latitude": 1.4129879639044798, 
                 "longtitude": 103.74791580436015,
-                "type": "Indoor Pool"
+                "type": ["Indoor Pool"]
             },
             {
                 "name": "Pet Stop",
@@ -63,18 +64,21 @@
                 "pic": "../images/pool/pool5.jpeg",
                 "latitude": 1.355429367375168, 
                 "longtitude": 103.88020177552454,
-                "type": "Indoor Pool"
+                "type": [
+                    "Indoor Pool", "Hydrotherapy Pool"
+                ]
+       
             },
             {
                 "name": "Wagging Tails N Playful Paws",
                 "address": "40 Yio Chu Kang Rd",
-                "area": "Northeast",
+                "area": "North",
                 "price": 46,
                 "hours": "8am - 7pm",
                 "pic": "../images/pool/pool7.jpeg",
                 "latitude": 1.3571375672073558, 
                 "longtitude": 103.87621886203152,
-                "type": "Indoor Pool"
+                "type": ["Indoor Pool"]
             },
             {
                 "name": "Hydro Paws Plus",
@@ -85,7 +89,7 @@
                 "pic": "../images/pool/pool10.jpeg",
                 "latitude": 1.3821991600493115, 
                 "longtitude": 103.83194317300443,
-                "type": "Indoor Pool"
+                "type": ["Indoor Pool"]
             },
             {
                 "name": "Canine Wellness and Rehab Center",
@@ -96,7 +100,9 @@
                 "pic": "../images/pool/pool9.jpeg",
                 "latitude": 1.3734953398355954, 
                 "longtitude": 103.83063173689521,
-                "type": "Indoor Pool"
+                "type": [
+                    "Indoor Pool", "Hydrotherapy Pool"
+                ]
             },
             {
                 "name": "Barker and Pooch",
@@ -107,7 +113,7 @@
                 "pic": "../images/pool/pool1.jpeg",
                 "latitude": 1.3116722757044263, 
                 "longtitude": 103.91172864799327,
-                "type": "Indoor Pool"
+                "type": ["Indoor Pool"]
             },
             {
                 "name": "Hydro Canine",
@@ -118,7 +124,9 @@
                 "pic": "../images/pool/pool12.jpeg",
                 "latitude": 1.3142799981357598, 
                 "longtitude": 103.90299584372747,
-                "type": "Indoor Pool"
+                "type": [
+                    "Indoor Pool", "Hydrotherapy Pool"
+                ]
             }
     ]
     

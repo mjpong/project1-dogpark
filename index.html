@@ -1,167 +1,286 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <!-- LEAFLET CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    
-    <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-    <!-- CLUSTERING CSS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css"/>
-    
-    <!-- Font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- LEAFLET CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style/style.css">
-    
-    <title>woofday</title>
+  <!-- BOOTSTRAP CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  </head>
+  <!-- CLUSTERING CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
 
-  <body>
-    <!-- Nav Bar -->  
-    <nav class="navbar navbar-light navbar-expand-md bg-white justify-content-md-center">
-      <a class="navbar-brand d-md-none d-inline" href="">
-        <img src= "images/woofday.jpeg" height="110" width="200" alt="">
-      </a>
-      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="navbar-collapse collapse justify-content-between align-items-center w-100" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto text-md-center text-left">
-            <li class="nav-item" style="display: flex; align-items:center">
-                <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#aboutUsModal" style="display: flex; align-items:center;">About Us</a> 
-            </li>
-            <li class="nav-item my-auto">
-                <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">
-                    <img src= "images/woofday.jpeg" height="140" width="240" alt="">
-                </a>
-            </li>
-            <li class="nav-item" style="display: flex; align-items:center">
-                <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#contactUsModal"style="display: flex; align-items:center;">Contact Us</a> 
-            </li>
-          </ul>
-          <!-- <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style/style.css">
+
+  <title>woofday</title>
+
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-light navbar-expand-md bg-white justify-content-md-center">
+    <a class="navbar-brand d-md-none d-inline" href="">
+      <img src="images/woofday.jpeg" height="110" width="200" alt="">
+    </a>
+    <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#nnavbar-supported-content"
+      aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse justify-content-between align-items-center w-100"
+      id="navbar-supported-content">
+      <ul class="navbar-nav mx-auto text-md-center text-left">
+        <li class="nav-item" style="display: flex; align-items:center">
+          <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#about-us-modal"
+            style="display: flex; align-items:center;">About Us</a>
+        </li>
+        <li class="nav-item my-auto">
+          <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">
+            <img src="images/woofday.jpeg" height="140" width="240" alt="">
+          </a>
+        </li>
+        <li class="nav-item" style="display: flex; align-items:center">
+          <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#contact-us-modal"
+            style="display: flex; align-items:center;">Contact Us</a>
+        </li>
+      </ul>
+      <!-- <ul class="nav navbar-nav flex-row justify-content-md-center justify-content-start flex-nowrap">
               <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-facebook"></i></a> </li>
               <li class="nav-item"><a class="nav-link" href=""><i class="fa fa-twitter"></i></a> </li>
           </ul> -->
-      </div>
-    </nav>
-    
-    <!-- Header Container -->
-    <div class ="container-fluid">
-      <!-- Row - Hyperlink to Dog Park and Pool -->
-      <div class ="row">
-        <!-- Park -->
-        <div class ="col-sm-4">
+    </div>
+  </nav>
 
-        </div>
-        <!-- Pool -->
-        <div class ="col-sm-4">
-
-        </div>
+  <!-- Header Container -->
+  <div class="container-fluid">
+    <!-- Row - Hyperlink to Dog Park and Pool -->
+    <div class="row">
+      <!-- Park -->
+      <div class="col-sm-4">
 
       </div>
-      <!-- FILTER ROW -->
-      <div class ="row">
-        <!-- PARK FILTER -->
-        <div class="col-sm-5">
+      <!-- Pool -->
+      <div class="col-sm-4">
 
-        </div>
-        <!-- POOL FILTER -->
-        <div class="col-sm-5">
-
-        </div>
       </div>
-    </div>  
 
-    <!-- About Us Modal -->
-    <div class="modal fade" id="aboutUsModal" tabindex="-1" role="dialog" aria-labelledby="aboutUsModalCenterTitle" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLongTitle">About woofday</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>
-              Our vision is to provide safe and secure environments where dog owners may exercise and bring their dogs for a good time! <br>
-              Pool or park? We have it all covered. <br>
-              With just a few clicks, you can search for the nearest area where your dogs can have fun!
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
+    </div>
+    <!-- FILTER ROW -->
+    <div class="row">
+      <!-- PARK FILTER -->
+      <div class="col-sm-5">
+
+      </div>
+      <!-- POOL FILTER -->
+      <div class="col-sm-5">
+
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us Modal -->
+  <div class="modal fade" id="about-us-modal" tabindex="-1" role="dialog" aria-labelledby="about-us-modal-label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="exampleModalLongTitle">About woofday</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            Our vision is to provide safe and secure environments where dog owners may exercise and bring their dogs for
+            a good time! <br>
+            Pool or park? We have it all covered. <br>
+            With just a few clicks, you can search for the nearest area where your dogs can have fun!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Contact Us Modal -->
-  
-    <div id="contactUsModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" id="exampleModalLongTitle">We'd love to hear from you!</h4>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
+  <!-- Contact Us Modal -->
 
-            <form class="form-horizontal col-sm-12">
-              <div>
-                Email: woof@woofday.com <br>
-                Call: 93582245 <br>
-                Opening hours: Mon - Fri, 10 am - 5 pm <br>
-              </div>
-              <br>
-              Or fill out this form and we will get back to you! <br> <br>
-              <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name" data-placement="top" data-trigger="manual" data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-              <div class="form-group"><label>Message</label><textarea class="form-control" placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
-              <div class="form-group"><button type="submit" class="btn btn-success pull-right">Submit</button> <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p></div>
-            </form>
+  <div id="contact-us-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="contact-us-modal-label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-long-title">We'd love to hear from you!</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          </div>
+          <form class="form-horizontal col-sm-12">
+            <div>
+              Email: woof@woofday.com <br>
+              Call: 93582245 <br>
+              Opening hours: Mon - Fri, 10 am - 5 pm <br>
+            </div>
+            <br>
+            Or fill out this form and we will get back to you! <br> <br>
+            <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name"
+                data-placement="top" data-trigger="manual"
+                data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
+            <div class="form-group"><label>Message</label><textarea class="form-control"
+                placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
+            <div class="form-group"><button type="submit" class="btn btn-success pull-right">Submit</button>
+              <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
+  </div>
 
 
 
-    <!-- Map -->
-    <div id="map" class="container-fluid m-0 p-0"></div>
+  <!-- Map -->
+  <div id="map" class="container-fluid m-0 p-0">
 
     <!-- Info side bar -->
-    <div id ="infoBar" class="pr-0 rounded">
-      <ul class= "nav nav-tabs shadow" id="tabBar" role="tablist">
+    <div class="row justify-content-left">
+      <div id="info-side-bar" class="pr-0 rounded">
+        <!-- 4 tabs -->
+        <ul class="nav nav-tabs shadow" id="myTab" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link" id="nav-filter-parks" data-toggle="tab" href="#nav-dogparks" role="tab"
+              aria-controls="filter" aria-selected="false"><i class="fas fa-tree"></i> Dog Parks</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-filter-pools" data-toggle="tab" href="#nav-dogpools" role="tab"
+              aria-controls="filter" aria-selected="false"><i class="fas fa-swimming-pool"></i> Dog Pools</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-search-results" data-toggle="tab" href="#nav-search" role="tab"
+              aria-controls="search" aria-selected="false"><i class="fas fa-paw"></i> Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="nav-minimize" data-toggle="tab" href="#" role="tab" aria-controls="tab-toggle"
+              aria-selected="false"><i class="fas fa-caret-down"></i></a>
+          </li>
+        </ul>
 
-        <li class="nav-item">
-          <a class="nav-link" id="filterResults" data-toggle="tab" href="#" role="tab" aria-controls="filter" aria-selected="false"><i class="fas fa-tree"></i> Dog Parks</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="filterResults" data-toggle="tab" href="#" role="tab" aria-controls="filter" aria-selected="false"><i class="fas fa-swimming-pool"></i> Dog Pools</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" id="searchResults" data-toggle="tab" href="#" role="tab" aria-controls="search" aria-selected="false"><i class="fas fa-search"></i> Search</a>
-        </li>
-        <li class="nav-item">
-					<a class="nav-link" id="minimize" data-toggle="tab" href="#" role="tab"
-						aria-controls="tab-toggle" aria-selected="false"><i class="fas fa-caret-down"></i></a>
-				</li>
-      </ul>
+        <!-- all tab content -->
+        <div class="tab-content shadow" id="myTabContent">
+
+          <!-- Dog park tab -->
+          <div class="tab-pane fade" id="nav-dogparks" role="tabpanel" aria-labelledby="nav-dogparks">
+            <div class="px-4 py-3">
+              <h6> Dog Parks in Singapore </h6>
+              <hr>
+              <b>Region </b>
+              <div class="pt-1">
+                <input type="checkbox" name="park-layers" value="" id="park-north"> North
+              </div>
+              <div class="pt-1">
+                <input type="checkbox" name="park-layers" value="" id="park-east"> East
+              </div>
+              <div class="pt-1">
+                <input type="checkbox" name="park-layers" value="" id="park-west"> West
+              </div>
+              <div class="pt-1">
+                <input type="checkbox" name="park-layers" value="" id="park-central"> Central
+              </div>
+              <hr>
+              <div class="row">
+                <div class="col">
+                  <button id="btn-reset" class="btn btn-sm btn-success border-white text-white ">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dog pool Tab -->
+          <div class="tab-pane fade" id="nav-dogpools" role="tabpanel" aria-labelledby="nav-dogpools">
+            <div class="px-4 py-3">
+              <h6> Dog Pools in Singapore </h6>
+              <hr>
+              <div class="row">
+                <div class="col-6">
+                  <b>Region</b>
+                  <div class="pt-1">
+                    <input type="checkbox" name="park-layers" value="" id="pool-north"> North
+                  </div>
+                  <div class="pt-1">
+                    <input type="checkbox" name="park-layers" value="" id="pool-east"> East
+                  </div>
+                  <div class="pt-1">
+                    <input type="checkbox" name="park-layers" value="" id="pool-west"> West
+                  </div>
+                  <div class="pt-1">
+                    <input type="checkbox" name="park-layers" value="" id="pool-central"> Central
+                  </div>
+
+                </div>
+                <div class ="col-6">
+                
+
+                <b>Type</b>
+                <div class="pt-1">
+                  <input type="checkbox" name="park-layers" value="" id="pool-outdoor"> Outdoor
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" name="park-layers" value="" id="pool-indoor"> Indoor
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" name="park-layers" value="" id="pool-hydro"> Hydrotherapy
+                </div>
+              </div>
+            </div>
+              <hr>
+              <div class="row">
+                <div class="col">
+                  <button id="btn-reset" class="btn btn-sm btn-success border-white text-white ">Reset</button>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <!-- Search Bar Tab -->
+          <div class="tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search">
+            <div class="row mx-0" id="search-bar-wrapper">
+              <div class= "p-0 col bg-light">
+                <div class="input-group mx-auto" id="search-bar">
+                  <input type="text" class="form-control rounded" id="search-query"
+                    placeholder="Woof! Search for a location e.g. East">
+                  <div class="input-group-append">
+                    <button class="input-group-text" id="btn-search"><i class="fas fa-paw" aria-hidden="true"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="search-result-header" class="m-0 p-0">
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
     </div>
 
 
@@ -179,9 +298,16 @@
     <!-- LOAD DATA JS -->
     <script src="scripts/load-data.js"></script>
     <!-- BOOTSTRAP JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  
-  </body>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+
+</body>
+
 </html>

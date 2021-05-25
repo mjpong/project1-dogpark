@@ -1,8 +1,8 @@
 // ADDING BASE MAP
 
 // SINGAPORE LATLONG + SETVIEW CENTER POINT
-let singapore = [1.3141086427175888, 103.83809046978706]; 
-let map = L.map('map').setView(singapore, 12.4); 
+let singapore = [1.3141086427175888, 103.83809046978706];
+let map = L.map('map').setView(singapore, 12.4);
 
 // TILE LAYERS 
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
