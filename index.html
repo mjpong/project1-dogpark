@@ -114,7 +114,7 @@
                 data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
             <div class="form-group"><label>Message</label><textarea class="form-control"
                 placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
-            <div class="form-group"><button type="submit" class="btn btn-success pull-right">Submit</button>
+            <div class="form-group"><button type="submit" id="btn-submit" class="btn btn-success pull-right">Submit</button>
               <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p>
             </div>
           </form>
@@ -163,20 +163,23 @@
             <hr>
             <b>Region </b>
             <div class="pt-1">
-              <input type="checkbox" name="park-layers" value="" id="park-north"> North
+              <input type="checkbox" class="parkBox" value="" id="park-north"> North
             </div>
             <div class="pt-1">
-              <input type="checkbox" name="park-layers" value="" id="park-east"> East
+              <input type="checkbox" class="parkBox" value="" id="park-east"> East
             </div>
             <div class="pt-1">
-              <input type="checkbox" name="park-layers" value="" id="park-west"> West
+              <input type="checkbox" class="parkBox" value="" id="park-west"> West
             </div>
             <div class="pt-1">
-              <input type="checkbox" name="park-layers" value="" id="park-central"> Central
+              <input type="checkbox" class="parkBox" value="" id="park-central"> Central
             </div>
             <hr>
             <div class="row">
-              <div class="col">
+              <div class="col-6">
+                <button class="btn btn-parkfilter btn-sm btn-primary border-white text-white ">Filter</button>
+              </div>
+              <div class="col-6">
                 <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
               </div>
             </div>
@@ -191,16 +194,16 @@
               <div class="col-6">
                 <b>Region</b>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-north"> North
+                  <input type="checkbox" class="poolBox" value="" id="pool-north"> North
                 </div>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-east"> East
+                  <input type="checkbox" class="poolBox" value="" id="pool-east"> East
                 </div>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-west"> West
+                  <input type="checkbox" class="poolBox" value="" id="pool-west"> West
                 </div>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-central"> Central
+                  <input type="checkbox" class="poolBox" value="" id="pool-central"> Central
                 </div>
 
               </div>
@@ -209,19 +212,22 @@
 
                 <b>Type</b>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-outdoor"> Outdoor
+                  <input type="checkbox" class="poolBox" value="" id="pool-outdoor"> Outdoor
                 </div>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-indoor"> Indoor
+                  <input type="checkbox" class="poolBox" value="" id="pool-indoor"> Indoor
                 </div>
                 <div class="pt-1">
-                  <input type="checkbox" name="park-layers" value="" id="pool-hydro"> Hydrotherapy
+                  <input type="checkbox" class="poolBox" value="" id="pool-hydro"> Hydrotherapy
                 </div>
               </div>
             </div>
             <hr>
             <div class="row">
-              <div class="col">
+              <div class="col-6">
+                <button class="btn btn-poolfilter btn-sm btn-primary border-white text-white ">Filter</button>
+              </div>
+              <div class="col-6">
                 <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
               </div>
             </div>
@@ -273,14 +279,8 @@
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster-src.js"></script>
   <!-- AXIOS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
-  <!-- CUSTOM JS -->
-  <script src="scripts/script.js"></script>
-  <script src="scripts/load-data.js"></script>
-  <script src="scripts/search-data.js"></script>
   <!-- JQUERY JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- BOOTSTRAP JS -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -291,6 +291,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+    <!-- CUSTOM JS -->
+    <script src="scripts/script.js"></script>
+    <script src="scripts/load-data.js"></script>
+    <script src="scripts/search-data.js"></script>
+    <script src="scripts/filter-data.js"></script>
 
 </body>
 

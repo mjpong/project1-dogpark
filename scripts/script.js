@@ -39,3 +39,14 @@ document.getElementById("nav-toggle").addEventListener('click', function(){
         }
     } 
 })
+
+// Modal Contact Us Submit Btn Alert
+
+let formBtn = document.getElementById('btn-submit')
+
+formBtn.addEventListener('click',function(){
+    alert("Thank you. Your response has been submitted.")
+})
+// function formSubmit(){
+//     if 
+// }

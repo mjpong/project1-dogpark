@@ -66,7 +66,7 @@ searchBtn.addEventListener('click', function () {
 
 })
 
-searchQuery.addEventListener("keyup",function(e){
+searchQuery.addEventListener("keyup", function (e) {
     if (e.keyCode === 13) {
         document.getElementById("btn-search").click()
     }
@@ -74,18 +74,29 @@ searchQuery.addEventListener("keyup",function(e){
 
 // show results in searchResults
 
-function showResults(results){
+function showResults(results) {
     searchResult.innerHTML = "";
+    searchResult.addEventListener("mouseon", function(e){
+        e.target.style.cursor = "pointer"
+        e.target.style.textDecoration = "underline"
+    })
+
     let count = 0;
-    for(let i of results){
-        searchResult.innerHTML += 
-        `
-        <p onClick="test(${count++})"> ${i.name} - ${i.property}, ${i.area}</p>`
+
+    for (let i of results) {
+        searchResult.innerHTML +=
+            `<p onClick="resultZoom(${count++})" class = "pResults"> ${i.name} - ${i.property}, ${i.area}</p>`
+
     }
 
 }
 
-function test(count){
+// // searchResult.addEventListener("mouseoout", function(e){
+// //     e.target.style.cursor = "pointer"
+// //     e.target.style.textDecoration = "underline"
+// // })
+
+function resultZoom(count) {
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     createMarkers([searchValue[count]], searchClusterLayer);
@@ -96,8 +107,8 @@ function test(count){
 
 // all reset btn to reset map
 let resetBtns = document.querySelectorAll(".btn-reset");
-for(let btn of resetBtns){
-    btn.addEventListener('click', function(){
+for (let btn of resetBtns) {
+    btn.addEventListener('click', function () {
         allClusterLayer.clearLayers();
         searchClusterLayer.clearLayers();
         createMarkers(allData, allClusterLayer);

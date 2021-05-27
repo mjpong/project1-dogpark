@@ -69,6 +69,7 @@ async function loadPoolsData() {
 // Marker function
 function createMarkers(coor, clusterLayer) {
     for (let i = 0; i < coor.length; i++) {
+        coor[i].area
         if (coor[i].property == "Park") {
             let parkPopup = L.popup().setContent(`
                 <h6>${coor[i].name}</h6>
