@@ -2,7 +2,7 @@
 const searchQuery = document.getElementById('searchQuery')
 const searchResult = document.getElementById('searchResult')
 const searchBtn = document.getElementById('btn-search')
-const resetBtn = document.getElementById('btn-reset')
+const resetBtn = document.getElementsByClassName('btn-reset')
 
 
 //getting search values
@@ -62,6 +62,8 @@ searchBtn.addEventListener('click', function () {
     createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
 
+    showResults(searchValue)
+
 })
 
 searchQuery.addEventListener("keyup",function(e){
@@ -70,5 +72,27 @@ searchQuery.addEventListener("keyup",function(e){
     }
 })
 
+// show results in searchResults
+
+function showResults(results){
+    searchResult.innerHTML = "";
+    for(let i of results){
+        searchResult.innerHTML += 
+        `
+        <p data-lat=${i.latitude} data-lng=${i.longtitude}> ${i.name} - ${i.property}, ${i.area}</p>`
+    }
+}
 
 
+
+console.log(document.querySelector(".btn-reset"));
+// all reset btn to reset map
+let resetBtns = document.querySelectorAll(".btn-reset");
+for(let btn of resetBtns){
+    btn.addEventListener('click', function(){
+        allClusterLayer.clearLayers();
+        searchClusterLayer.clearLayers();
+        createMarkers(allData, allClusterLayer);
+        searchResult.innerHTML = "";
+    })
+}
