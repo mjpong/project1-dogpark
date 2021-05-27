@@ -96,46 +96,6 @@ function createMarkers(coor, clusterLayer) {
 }
 
 
-// function createParkMarkers(coor, pin, clusterLayer) {
-//     console.log(coor);
-//     for (let i = 0; i < coor.length; i++) {
-//         if (coor[i].property == "Park") {
-
-//         }
-//         const parkPopup = L.popup()
-//             .setContent(`
-//         <h6>${coor[i].name}</h6>
-//         <hr>
-//         <p> Address: ${coor[i].address}</p>
-//         <p> Opening Hours: ${coor[i].hours}</p>
-//         <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
-//         `)
-//         L.marker([coor[i].latitude, coor[i].longtitude], { icon: pin }).bindPopup(parkPopup).addTo(clusterLayer)
-//     };
-//     return clusterLayer;
-// }
-
-// function createPoolMarkers(coor, pin, clusterLayer) {
-//     for (let i = 0; i < coor.length; i++) {
-//         const poolPopup = L.popup()
-//             .setContent(`
-//         <h6>${coor[i].name}</h6>
-//         <hr>
-//         <p> Address: ${coor[i].address}</p>
-//         <p> Pool Type: ${coor[i].type}</p>
-//         <p> Price: $${coor[i].price}</p>
-//         <p> Opening Hours: ${coor[i].hours}</p>
-//         <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
-//         `)
-//         L.marker([coor[i].latitude, coor[i].longtitude], { icon: pin }).bindPopup(poolPopup).addTo(clusterLayer)
-//     };
-//     return clusterLayer;
-// }
-
-
-
-
-
 let allClusterLayer = L.markerClusterGroup().addTo(map);
 
 // Run all

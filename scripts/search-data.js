@@ -5,6 +5,7 @@ const searchBtn = document.getElementById('btn-search')
 const resetBtn = document.getElementById('btn-reset')
 
 
+//getting search values
 
 function getSearch(inputValue, allData) {
     let search = []
@@ -42,77 +43,32 @@ function getSearch(inputValue, allData) {
                     'property': i.property
                 })
 
+            }
         }
     }
+    return search;
 }
-        return search;
+
+let searchClusterLayer = L.markerClusterGroup();
+
+// click btn or press enter to search 
+searchBtn.addEventListener('click', function () {
+    let userSearch = searchQuery.value;
+    let searchValue = getSearch(userSearch, allData);
+    //empty layers
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    // go through element , add to new cluster layer
+    createMarkers(searchValue, searchClusterLayer);
+    searchClusterLayer.addTo(map);
+
+})
+
+searchQuery.addEventListener("keyup",function(e){
+    if (e.keyCode === 13) {
+        document.getElementById("btn-search").click()
     }
-
-    let searchClusterLayer = L.markerClusterGroup();
-    searchBtn.addEventListener('click', function() {
-        let userSearch = searchQuery.value;
-        let searchValue = getSearch(userSearch, allData);
-        console.log(searchValue)
-
-        // empty the all cluster layer
-        allClusterLayer.clearLayers();
-        searchClusterLayer.clearLayers();
-
-        // go through each element in the result
-
-        createMarkers(searchValue, searchClusterLayer);
-        searchClusterLayer.addTo(map);
-
-        // .. add each of them to the all cluster layer
+})
 
 
 
-    })
-
-// clear layers
-// function clearLayer(){
-
-// }
-
-// // get search value function
-// let search = []
-
-// function getSearch(value, parkdata, pooldata){
-//     clearList();
-//     let uservalue = searchQuery.value.toLowercase()
-//     for (let i of parkdata) {
-//         let name = i.name.toLowerCase()
-//         let address = i.address.toLowerCase()
-//         let area = i.area.toLowerCase()
-//         if (name.includes(uservalue) || (address.includes(uservalue)) || (area.includes(uservalue))) {
-//             search.push({
-//                 ''
-//             })
-//         } else if(value.length === 0) {
-//             setNoResults();
-//         }
-
-
-//     }
-// } 
-
-
-// function clearList(){
-
-// }
-
-// function setNoResults(){
-
-// }
-
-// search.addEventListener('input', function(){
-//     searchAll(search.value)
-// })
-
-// // get searchQuery value
-
-// document.getElementById("searchQuery").addEventListener("keyup",function(e){
-//     if (e.keycode === 13) {
-//         document.getElementById("btn-search").click()
-//     }
-// })

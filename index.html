@@ -260,18 +260,29 @@
 
           <!-- Search Bar Tab -->
           <div class="tab-pane fade" id="nav-search" role="tabpanel" aria-labelledby="nav-search">
-            <div class="row mx-0" id="search-bar-wrapper">
-              <div class="p-0 col bg-light">
-                <div class="input-group mx-auto" id="search-bar">
-                  <input type="text" class="form-control rounded" id="searchQuery"
-                    placeholder="Woof! Search for a location e.g. East">
-                  <div class="input-group-append">
-                    <button class="input-group-text" id="btn-search"><i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
+            <div class="px-4 py-3">
+              <h6> Woof! What are you search for? </h6>
+              <hr>
+              <div class="row mx-0" id="search-bar-wrapper">
+                <div class="p-0 col bg-light">
+                  <div class="input-group mx-auto" id="search-bar">
+                    <input type="text" class="form-control rounded" id="searchQuery" placeholder="e.g. East">
+                    <div class="input-group-append">
+                      <button class="input-group-text" id="btn-search"><i class="fas fa-search" aria-hidden="true"></i>
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
+              <hr>
+                <div class="row">
+                  <div class="col">
+                    <button id="btn-reset" class="btn btn-sm btn-success border-white text-white ">Reset</button>
+                  </div>
+                </div>
             </div>
+
+
             <div id="searchResult" class="m-0 p-0">
 
             </div>
@@ -296,8 +307,8 @@
     <script src="scripts/search-data.js"></script>
     <!-- JQUERY JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
     <!-- BOOTSTRAP JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
