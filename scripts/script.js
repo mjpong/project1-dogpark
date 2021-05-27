@@ -20,19 +20,22 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // })
 
 
-// document.getElementById("nav-toggle").addEventListener('click', function(e){
+// FUNCTIONS 
 
-    
-//     if(document.getElementById("myTabContent").style.display == 'none'){
-//         e.target.innerHTML = "O";
-//         document.getElementById("myTabContent").style.display = 'block'
-//     } else {
-//         e.target.innerHTML = "T";
-//         document.getElementById("myTabContent").style.display = 'none'
-//     }
-// })
+// Toggle to show
+document.getElementById("nav-toggle").addEventListener('click', function(){
+    let isShown = false;
+    for(let pane of document.querySelectorAll(".tab-pane")){
+        if(pane.classList.contains("active")){
+            isShown = true;
+        }
+    }
 
-$('#nav-toggle').click(function(){
-    $('#myTabContent').slideToggle()
-    $('#nav-toggle i').toggleClass('fa-rotate-180')
+    if(isShown){
+        for(let pane of document.querySelectorAll(".tab-pane")){
+            pane.classList.remove("show");
+            pane.classList.remove("active");
+            pane.classList.remove("fade");
+        }
+    } 
 })
