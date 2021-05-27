@@ -50,11 +50,11 @@ function getSearch(inputValue, allData) {
 }
 
 let searchClusterLayer = L.markerClusterGroup();
-
+let searchValue = [];
 // click btn or press enter to search 
 searchBtn.addEventListener('click', function () {
     let userSearch = searchQuery.value;
-    let searchValue = getSearch(userSearch, allData);
+    searchValue = getSearch(userSearch, allData);
     //empty layers
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
@@ -76,16 +76,24 @@ searchQuery.addEventListener("keyup",function(e){
 
 function showResults(results){
     searchResult.innerHTML = "";
+    let count = 0;
     for(let i of results){
         searchResult.innerHTML += 
         `
-        <p data-lat=${i.latitude} data-lng=${i.longtitude}> ${i.name} - ${i.property}, ${i.area}</p>`
+        <p onClick="test(${count++})"> ${i.name} - ${i.property}, ${i.area}</p>`
     }
+
+}
+
+function test(count){
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    createMarkers([searchValue[count]], searchClusterLayer);
+    map.setView([searchValue[count].latitude, searchValue[count].longtitude + 0.001], 18);
 }
 
 
 
-console.log(document.querySelector(".btn-reset"));
 // all reset btn to reset map
 let resetBtns = document.querySelectorAll(".btn-reset");
 for(let btn of resetBtns){
@@ -94,5 +102,7 @@ for(let btn of resetBtns){
         searchClusterLayer.clearLayers();
         createMarkers(allData, allClusterLayer);
         searchResult.innerHTML = "";
+        map.setView(singapore, 12.4);
+        searchQuery.value = "";
     })
 }

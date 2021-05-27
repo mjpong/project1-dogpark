@@ -77,7 +77,7 @@ function createMarkers(coor, clusterLayer) {
                 <p> Opening Hours: ${coor[i].hours}</p>
                 <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
                 `)
-            L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer)
+            L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer);
         } else {
             let poolPopup = L.popup().setContent(`
                 <h6>${coor[i].name}</h6>
