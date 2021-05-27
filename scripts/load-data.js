@@ -16,7 +16,9 @@ const poolPin = L.icon({
 // Global Variable
 let allParksData = [];
 let allPoolsData = [];
-let allData = []
+let allData;
+
+
 
 // AXIOS just to read the park data
 async function loadParksData() {
@@ -25,14 +27,15 @@ async function loadParksData() {
     console.log(parksData)
     for (let i of parksData.dog_parks) {
         allParksData.push({
-            Name: i.name,
-            Address: i.address,
-            Area: i.area,
-            Hours: i.hours,
-            Pic: i.pic,
-            Lighting: i.lighting,
-            Latitude: i.latitude,
-            Longtitude: i.longtitude
+            name: i.name,
+            address: i.address,
+            area: i.area,
+            hours: i.hours,
+            pic: i.pic,
+            lighting: i.lighting,
+            latitude: i.latitude,
+            longtitude: i.longtitude,
+            property: i.property
         })
 
     }
@@ -45,17 +48,17 @@ async function loadPoolsData() {
     let poolsData = response.data;
     console.log(poolsData)
     for (let i of poolsData.dog_pools) {
-        let typeStr = i.type.toString().replace(",", ", ")
         allPoolsData.push({
-            Name: i.name,
-            Address: i.address,
-            Area: i.area,
-            Price: i.price,
-            Hours: i.hours,
-            Pic: i.pic,
-            Latitude: i.latitude,
-            Longtitude: i.longtitude,
-            Type: typeStr,
+            name: i.name,
+            address: i.address,
+            area: i.area,
+            price: i.price,
+            hours: i.hours,
+            pic: i.pic,
+            latitude: i.latitude,
+            longtitude: i.longtitude,
+            type: i.type.toString().replace(",", ", "),
+            property: i.property
         })
 
     }
@@ -64,79 +67,84 @@ async function loadPoolsData() {
 
 
 // Marker function
-
-function createParkMarkers(coor, pin, clusterLayer) {
+function createMarkers(coor, clusterLayer) {
     for (let i = 0; i < coor.length; i++) {
-        const parkPopup = L.popup()
-            .setContent(`
-        <h6>${coor[i].parkName}</h6>
-        <hr>
-        <p> Address: ${coor[i].parkAddress}</p>
-        <p> Opening Hours: ${coor[i].parkHours}</p>
-        <p> <img src="${coor[i].parkPic}" style="width:275px; height:150px"/> 
-        `)
-        L.marker([coor[i].parkLatitude, coor[i].parkLongtitude], { icon: pin }).bindPopup(parkPopup).addTo(clusterLayer)
-    };
-    return clusterLayer;
-}
+        if (coor[i].property == "Park") {
+            let parkPopup = L.popup().setContent(`
+                <h6>${coor[i].name}</h6>
+                <hr>
+                <p> Address: ${coor[i].address}</p>
+                <p> Opening Hours: ${coor[i].hours}</p>
+                <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                `)
+            L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer)
+        } else {
+            let poolPopup = L.popup().setContent(`
+                <h6>${coor[i].name}</h6>
+                <hr>
+                <p> Address: ${coor[i].address}</p>
+                <p> Pool Type: ${coor[i].type}</p>
+                <p> Price: $${coor[i].price}</p>
+                <p> Opening Hours: ${coor[i].hours}</p>
+                <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                `)
+            L.marker([coor[i].latitude, coor[i].longtitude], { icon: poolPin }).bindPopup(poolPopup).addTo(clusterLayer)
+        }
+    }
+        return clusterLayer;
 
-function createPoolMarkers(coor, pin, clusterLayer) {
-    for (let i = 0; i < coor.length; i++) {
-        const poolPopup = L.popup()
-            .setContent(`
-        <h6>${coor[i].poolName}</h6>
-        <hr>
-        <p> Address: ${coor[i].poolAddress}</p>
-        <p> Pool Type: ${coor[i].poolType}</p>
-        <p> Price: $${coor[i].poolPrice}</p>
-        <p> Opening Hours: ${coor[i].poolHours}</p>
-        <p> <img src="${coor[i].poolPic}" style="width:275px; height:150px"/> 
-        `)
-        L.marker([coor[i].poolLatitude, coor[i].poolLongtitude], { icon: pin }).bindPopup(poolPopup).addTo(clusterLayer)
-    };
-    return clusterLayer;
 }
 
 
-// Layers Groups
+// function createParkMarkers(coor, pin, clusterLayer) {
+//     console.log(coor);
+//     for (let i = 0; i < coor.length; i++) {
+//         if (coor[i].property == "Park") {
 
-// let parkGroup = L.layerGroup();
-// parkGroup.addTo(map);
-
-// let poolGroup = L.layerGroup();
-// poolGroup.addTo(map);
-
-// let baseLayers = {
+//         }
+//         const parkPopup = L.popup()
+//             .setContent(`
+//         <h6>${coor[i].name}</h6>
+//         <hr>
+//         <p> Address: ${coor[i].address}</p>
+//         <p> Opening Hours: ${coor[i].hours}</p>
+//         <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+//         `)
+//         L.marker([coor[i].latitude, coor[i].longtitude], { icon: pin }).bindPopup(parkPopup).addTo(clusterLayer)
+//     };
+//     return clusterLayer;
 // }
-// let overlays = {
-//     'Dog Parks': parkGroup,
-//     'Dog Pools': poolGroup,
+
+// function createPoolMarkers(coor, pin, clusterLayer) {
+//     for (let i = 0; i < coor.length; i++) {
+//         const poolPopup = L.popup()
+//             .setContent(`
+//         <h6>${coor[i].name}</h6>
+//         <hr>
+//         <p> Address: ${coor[i].address}</p>
+//         <p> Pool Type: ${coor[i].type}</p>
+//         <p> Price: $${coor[i].price}</p>
+//         <p> Opening Hours: ${coor[i].hours}</p>
+//         <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+//         `)
+//         L.marker([coor[i].latitude, coor[i].longtitude], { icon: pin }).bindPopup(poolPopup).addTo(clusterLayer)
+//     };
+//     return clusterLayer;
 // }
 
-// L.control.layers(baseLayers, overlays).addTo(map);
 
 
-let allClusterLayer;
+
+
+let allClusterLayer = L.markerClusterGroup().addTo(map);
 
 // Run all
 async function run() {
-    let allClusterLayer = L.markerClusterGroup().addTo(map);
-
     let parksData = await loadParksData()
-    console.log(parksData)
-    // parkClusterLayer = L.markerClusterGroup();
-    // createParkMarkers(parksData, parkPin, parkClusterLayer).addTo(map)
-    createParkMarkers(parksData, parkPin, allClusterLayer);
-
-
     let poolsData = await loadPoolsData()
-    console.log(poolsData)
-    // poolClusterLayer = L.markerClusterGroup();
-    // createPoolMarkers(poolsData, poolPin, poolClusterLayer).addTo(map)
-    createPoolMarkers(poolsData,poolPin, allClusterLayer);
 
     allData = [...parksData, ...poolsData];
-
+    createMarkers(allData, allClusterLayer);
 }
 
 run();
