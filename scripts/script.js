@@ -23,21 +23,21 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 // FUNCTIONS 
 
 // Toggle to show
-document.getElementById("nav-toggle").addEventListener('click', function(){
+document.getElementById("nav-toggle").addEventListener('click', function () {
     let isShown = false;
-    for(let pane of document.querySelectorAll(".tab-pane")){
-        if(pane.classList.contains("active")){
+    for (let pane of document.querySelectorAll(".tab-pane")) {
+        if (pane.classList.contains("active")) {
             isShown = true;
         }
     }
 
-    if(isShown){
-        for(let pane of document.querySelectorAll(".tab-pane")){
+    if (isShown) {
+        for (let pane of document.querySelectorAll(".tab-pane")) {
             pane.classList.remove("show");
             pane.classList.remove("active");
             pane.classList.remove("fade");
         }
-    } 
+    }
 })
 
 // Modal Contact Us Submit Btn Alert
@@ -47,7 +47,7 @@ let formBtn = document.getElementById('btn-submit')
 
 function validateForm() {
     let i = document.forms["myForm"]["fname"].value;
-    if (i == ""){
+    if (i == "") {
         alert("Name must be filled out");
         return false;
     } else {
@@ -55,3 +55,20 @@ function validateForm() {
     }
 }
 
+
+// all reset btn to reset map
+let resetBtns = document.querySelectorAll(".btn-reset");
+for (let btn of resetBtns) {
+    btn.addEventListener('click', function () {
+        allClusterLayer.clearLayers();
+        searchClusterLayer.clearLayers();
+        filterClusterLayer.clearLayers();
+        createMarkers(allData, allClusterLayer);
+        map.setView(singapore, 12.4);
+        searchResult.innerHTML = "";
+        searchQuery.value = "";
+        $('input[type=checkbox]').each(function () {
+            this.checked = false;
+        });
+    })
+}

@@ -1,56 +1,40 @@
 let allCheckboxes = document.querySelectorAll('input[type=checkbox]');
-let allCheckedboxes = document.querySelectorAll('input[type=checkbox]:checked')
-let parkCheckboxes = document.querySelectorAll('.parkBox');
-let poolCheckboxes = document.querySelectorAll('.poolBox');
-let parkFilter = document.querySelector('btn-parkfilter');
-let poolFilter = document.querySelector('btn-poolfilter');
+let allCheckedboxes = document.querySelectorAll('input[type=checkbox]:checked');
 
-// filter results from load-data
+let parkAreaBox = document.querySelectorAll('.parkAreaBox');
+let parkAmenitiesBox = document.querySelectorAll('.parkAmenitiesBox');
 
-// for (let park of parkCheckboxes) {
-//     for (park.checked == true) {
-//         if (park.checked == i.area)
-//     }
-// }
+let poolTypeBox = document.querySelectorAll('.poolTypeBox');
+let poolAreaBox = document.querySelectorAll('.poolAreaBox');
+
+let parkFilter = document.querySelector('.btn-parkfilter');
+let poolFilter = document.querySelector('.btn-poolfilter');
 
 
-// allCheckboxes.forEach(allCheckboxes => allCheckboxes.addEventListener('click', handleCheck))
 
+let filterClusterLayer = L.markerClusterGroup().addTo(map);
 
-// function filterSearch(userCheck) {
-//     let userCheckbox = []
+function checkFilters(box, data){
+    for(let i of box){
+        if(i.checked){
+            createMarkers(data[i.value], filterClusterLayer);
+        }
+    }
+}
 
-//     for (let i of allData) {
-//         if (i.area == userCheck) {
-//             if (i.property == "Park") {
-//                 userCheckbox.push({
-//                     'name': i.name,
-//                     'address': i.address,
-//                     'area': i.area,
-//                     'hours': i.hours,
-//                     'pic': i.pic,
-//                     'lighting': i.lighting,
-//                     'latitude': i.latitude,
-//                     'longtitude': i.longtitude,
-//                     'property': i.property
-//                 })
-//             } else {
-//                 userCheckbox.push({
-//                     'name': i.name,
-//                     'address': i.address,
-//                     'area': i.area,
-//                     'price': i.price,
-//                     'hours': i.hours,
-//                     'pic': i.pic,
-//                     'latitude': i.latitude,
-//                     'longtitude': i.longtitude,
-//                     'type': i.type.toString().replace(",", ", "),
-//                     'property': i.property
-//                 })
-//             }
-//         }
-//     }
-//     return userCheckbox;
-// }
+parkFilter.addEventListener("click", function(){
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
+    checkFilters(parkAreaBox, parksByArea);
+    checkFilters(parkAmenitiesBox, parkAmenities);
+})
 
-// console.log(filterSearch(1))
+poolFilter.addEventListener("click",function(){
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
+    checkFilters(poolAreaBox, poolsByArea);
+    checkFilters(poolTypeBox, poolType)
+})
+

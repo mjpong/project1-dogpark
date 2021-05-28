@@ -16,7 +16,6 @@ function getSearch(inputValue, allData) {
         let area = i.area.toLowerCase()
         let property = i.property.toLowerCase()
         if (name.includes(input) || (address.includes(input)) || (area.includes(input)) || (property.includes(input))) {
-
             if (i.property == "Park") {
                 search.push({
                     'name': i.name,
@@ -40,7 +39,7 @@ function getSearch(inputValue, allData) {
                     'pic': i.pic,
                     'latitude': i.latitude,
                     'longtitude': i.longtitude,
-                    'type': i.type.toString().replace(",", ", "),
+                    'type': i.type.toString().replace(/,/g, ", "),
                     'property': i.property
                 })
 
@@ -59,6 +58,7 @@ searchBtn.addEventListener('click', function () {
     //empty layers
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
     // go through element , add to new cluster layer
     createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
@@ -73,7 +73,7 @@ searchQuery.addEventListener("keyup", function (e) {
     }
 })
 
-// show results in searchResults
+// show results in searchResults + 
 
 function showResults(results) {
     searchResult.innerHTML = "";
@@ -87,29 +87,13 @@ function showResults(results) {
 
 }
 
-// // searchResult.addEventListener("mouseoout", function(e){
-// //     e.target.style.cursor = "pointer"
-// //     e.target.style.textDecoration = "underline"
-// // })
 
 function resultZoom(count) {
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
     createMarkers([searchValue[count]], searchClusterLayer);
     map.setView([searchValue[count].latitude, searchValue[count].longtitude + 0.001], 18);
 }
 
 
-
-// all reset btn to reset map
-let resetBtns = document.querySelectorAll(".btn-reset");
-for (let btn of resetBtns) {
-    btn.addEventListener('click', function () {
-        allClusterLayer.clearLayers();
-        searchClusterLayer.clearLayers();
-        createMarkers(allData, allClusterLayer);
-        searchResult.innerHTML = "";
-        map.setView(singapore, 12.4);
-        searchQuery.value = "";
-    })
-}
