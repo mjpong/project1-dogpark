@@ -26,6 +26,7 @@ parkFilter.addEventListener("click", function(){
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     filterClusterLayer.clearLayers();
+    map.setView(singapore, 12.4);
     checkFilters(parkAreaBox, parksByArea);
     checkFilters(parkAmenitiesBox, parkAmenities);
 })
@@ -34,6 +35,7 @@ poolFilter.addEventListener("click",function(){
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     filterClusterLayer.clearLayers();
+    map.setView(singapore, 12.4);
     checkFilters(poolAreaBox, poolsByArea);
     checkFilters(poolTypeBox, poolType)
 })

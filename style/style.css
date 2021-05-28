@@ -1,6 +1,9 @@
-/* body {
-  font-size: 2em;
-} */
+/* Nav */
+.tagline {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+/* Map */
 
 #map {
     height: 100vh;
@@ -9,13 +12,10 @@
     position: fixed;
   }
 
-  .page-header {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    background-color: rgba(145, 158, 250, 0.75);
- }
 
- #info-side-bar{
+/* Info Bar */
+
+#info-side-bar{
   background-color: white;
   z-index: 1030;
   position: absolute;
@@ -37,4 +37,24 @@
   cursor: pointer;
   text-decoration: underline;
 }
- /* Mobile Map */
+
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+  #info-side-bar {
+    font-size: 0.8rem; 
+  }
+ #info-side-bar h6 {
+   font-size: 0.8rem; 
+ }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}

@@ -92,8 +92,11 @@ function resultZoom(count) {
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     filterClusterLayer.clearLayers();
-    createMarkers([searchValue[count]], searchClusterLayer);
+    let resultLayer = createMarkers([searchValue[count]], searchClusterLayer);
     map.setView([searchValue[count].latitude, searchValue[count].longtitude + 0.001], 18);
+    for (let l of resultLayer.getLayers()) {
+        l.openPopup();
+    }
 }
 
 

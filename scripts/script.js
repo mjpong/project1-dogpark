@@ -42,15 +42,20 @@ document.getElementById("nav-toggle").addEventListener('click', function () {
 
 // Modal Contact Us Submit Btn Alert
 
-
 let formBtn = document.getElementById('btn-submit')
 
 function validateForm() {
     let i = document.forms["myForm"]["fname"].value;
+    let j = document.forms["myForm"]["fcontact"].value;
     if (i == "") {
         alert("Name must be filled out");
         return false;
-    } else {
+    }
+    if (j == ""){
+        alert("Email must be filled out");
+        return false;
+    }
+    else {
         alert("Thank you. Your response has been submitted.")
     }
 }
