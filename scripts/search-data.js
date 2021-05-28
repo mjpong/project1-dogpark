@@ -24,6 +24,7 @@ function getSearch(inputValue, allData) {
                     'area': i.area,
                     'hours': i.hours,
                     'pic': i.pic,
+                    'amenities': i.amenities.toString().replace(/,/g, ", "),
                     'lighting': i.lighting,
                     'latitude': i.latitude,
                     'longtitude': i.longtitude,
@@ -76,11 +77,6 @@ searchQuery.addEventListener("keyup", function (e) {
 
 function showResults(results) {
     searchResult.innerHTML = "";
-    searchResult.addEventListener("mouseon", function(e){
-        e.target.style.cursor = "pointer"
-        e.target.style.textDecoration = "underline"
-    })
-
     let count = 0;
 
     for (let i of results) {

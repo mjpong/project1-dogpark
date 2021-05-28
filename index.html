@@ -101,7 +101,7 @@
         </div>
         <div class="modal-body">
 
-          <form class="form-horizontal col-sm-12">
+          <form class="form-horizontal col-sm-12" name="myForm" onsubmit="return validateForm()" required>
             <div>
               Email: woof@woofday.com <br>
               Call: 93582245 <br>
@@ -109,12 +109,13 @@
             </div>
             <br>
             Or fill out this form and we will get back to you! <br> <br>
-            <div class="form-group"><label>Name</label><input class="form-control required" placeholder="Your name"
-                data-placement="top" data-trigger="manual"
+            <div class="form-group"><label>Name</label><input class="form-control required" name="fname"
+                placeholder="Your name" data-placement="top" data-trigger="manual"
                 data-content="Must be at least 3 characters long, and must only contain letters." type="text"></div>
-            <div class="form-group"><label>Message</label><textarea class="form-control"
+            <div class="form-group"><label>Message</label><textarea class="form-control" name="fmsg"
                 placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea></div>
-            <div class="form-group"><button type="submit" id="btn-submit" class="btn btn-success pull-right">Submit</button>
+            <div class="form-group"><button type="submit" id="btn-submit"
+                class="btn btn-success pull-right">Submit</button>
               <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p>
             </div>
           </form>
@@ -161,18 +162,35 @@
           <div class="px-4 py-3">
             <h6> Dog Parks in Singapore </h6>
             <hr>
-            <b>Region </b>
-            <div class="pt-1">
-              <input type="checkbox" class="parkBox" value="" id="park-north"> North
-            </div>
-            <div class="pt-1">
-              <input type="checkbox" class="parkBox" value="" id="park-east"> East
-            </div>
-            <div class="pt-1">
-              <input type="checkbox" class="parkBox" value="" id="park-west"> West
-            </div>
-            <div class="pt-1">
-              <input type="checkbox" class="parkBox" value="" id="park-central"> Central
+            <div class="row">
+              <div class="col-6">
+                <b>Region</b>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-north"> North
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-east"> East
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-west"> West
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-central"> Central
+                </div>
+
+              </div>
+              <div class="col-6">
+                <b>Amenities</b>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-fountain"> Water Fountain
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-sink"> Doggy Playground
+                </div>
+                <div class="pt-1">
+                  <input type="checkbox" class="parkBox" value="" id="park-sink"> Washroom
+                </div>
+              </div>
             </div>
             <hr>
             <div class="row">
@@ -183,8 +201,11 @@
                 <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
               </div>
             </div>
+
           </div>
         </div>
+
+
         <!-- Dog pool Tab -->
         <div class="tab-pane fade" id="nav-dogpools" role="tabpanel" aria-labelledby="nav-dogpools">
           <div class="px-4 py-3">
@@ -291,11 +312,11 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-    <!-- CUSTOM JS -->
-    <script src="scripts/script.js"></script>
-    <script src="scripts/load-data.js"></script>
-    <script src="scripts/search-data.js"></script>
-    <script src="scripts/filter-data.js"></script>
+  <!-- CUSTOM JS -->
+  <script src="scripts/script.js"></script>
+  <script src="scripts/load-data.js"></script>
+  <script src="scripts/search-data.js"></script>
+  <script src="scripts/filter-data.js"></script>
 
 </body>
 

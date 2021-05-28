@@ -32,4 +32,9 @@
   overflow-y: scroll;
 
 }
+
+.pResults:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
  /* Mobile Map */

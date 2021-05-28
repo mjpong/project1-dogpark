@@ -7,6 +7,9 @@
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "pic": "../images/park/park1.jpeg",
+        "amenities": [
+            "Fountain", "Playground", "Washroom"
+        ],
         "latitude": 1.3633964754734702,
         "longtitude": 103.84358391789335,
         "property": "Park"
@@ -18,6 +21,9 @@
         "hours": "24/7",
         "lighting": "7pm - 10pm",
         "pic": "../images/park/park2.jpeg",
+        "amenities": [
+            "Fountain", "Washroom"
+        ],
         "latitude": 1.3476979681227628,  
         "longtitude": 103.85085050852403,
         "property": "Park"
@@ -29,6 +35,9 @@
         "hours": "10am - 10pm",
         "lighting": "Until 10pm",
         "pic": "../images/park/park3.jpeg",
+        "amenities": [
+            "Fountain", "Washroom"
+        ],
         "latitude": 1.358175613376079,
         "longtitude": 103.9460209463029,
         "property": "Park"
@@ -40,6 +49,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park4.jpeg",
+        "amenities": [
+            "Playground","Washroom"
+        ],
         "latitude": 1.4613222312273142, 
         "longtitude": 103.8360921046562,
         "property": "Park"
@@ -51,6 +63,9 @@
         "hours": "24/7",
         "lighting": "7pm - 7am",
         "pic": "../images/park/park5.jpeg",
+        "amenities": [
+            "Fountain"
+        ],
         "latitude": 1.4294822462314574,
         "longtitude": 103.84160494023173,
         "property": "Park"
@@ -62,6 +77,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park6.jpeg",
+        "amenities": [
+            "Playground"
+        ],
         "latitude": 1.3332706248519737, 
         "longtitude": 103.86894408552565,
         "property": "Park"
@@ -73,6 +91,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park7.jpeg",
+        "amenities": [
+            "Playground", "Washroom"
+        ],
         "latitude": 1.368662268108972,
         "longtitude": 103.96222909854168,
         "property": "Park"
@@ -84,6 +105,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park8.jpeg",
+        "amenities": [
+            "Playground","Washroom"
+        ],
         "latitude": 1.365011927994062,
         "longtitude": 103.96950015247067,
         "property": "Park"
@@ -96,6 +120,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park9.jpeg",
+        "amenities": [
+            "Fountain", "Washroom"
+        ],
         "latitude": 1.3309099300154223, 
         "longtitude": 103.92693320343074,
         "property": "Park"
@@ -107,6 +134,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park10.jpeg",
+        "amenities": [
+            "Fountain", "Washroom"
+        ],
         "latitude": 1.3359005913903679,
         "longtitude": 103.92653114783666,
         "property": "Park"
@@ -118,6 +148,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park11.jpeg",
+        "amenities": [
+            "Fountain" , "Washroom"
+        ],
         "latitude": 1.286768144084842, 
         "longtitude": 103.83723975701105,
         "property": "Park"
@@ -129,6 +162,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park12.jpeg",
+        "amenities": [
+            "Fountain", "Playground"
+        ],
         "latitude": 1.3070184473838926, 
         "longtitude": 103.78684842227442,
         "property": "Park"
@@ -140,6 +176,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park13.jpeg",
+        "amenities": [
+            "Fountain"
+        ],
         "latitude": 1.3111320476810617,
         "longtitude": 103.90343645025615,
         "property": "Park"
@@ -151,6 +190,9 @@
         "hours": "9am - 10pm",
         "lighting": "N/A",
         "pic": "../images/park/park14.jpeg",
+        "amenities": [
+            "Fountain"
+        ],
         "latitude": 1.3337629981654435, 
         "longtitude": 103.72754365374226,
         "property": "Park"
@@ -162,6 +204,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park15.jpeg",
+        "amenities": [
+            "Fountain", "Playground"
+        ],
         "latitude": 1.291165131436203,  
         "longtitude": 103.77495876379946,
         "property": "Park"
@@ -173,6 +218,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park16.jpeg",
+        "amenities": [
+            "Washroom"
+        ],
         "latitude": 1.293964871836445, 
         "longtitude": 103.8369710170216,
         "property": "Park"
@@ -184,6 +232,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park17.jpeg",
+        "amenities": [
+            "Fountain", "Playground", "Washroom"
+        ],
         "latitude": 1.2966686512880863,
         "longtitude": 103.88539444389426,
         "property": "Park"
@@ -195,6 +246,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park18.jpeg",
+        "amenities": [
+            "Fountain", "Playground"
+        ],
         "latitude": 1.3012615480351248, 
         "longtitude": 103.909883178204,
         "property": "Park"
@@ -206,6 +260,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park19.jpeg",
+        "amenities": [
+            "Fountain"
+        ],
         "latitude": 1.3288101528987881, 
         "longtitude": 103.84716390351184,
         "property": "Park"
@@ -217,6 +274,9 @@
         "hours": "24/7",
         "lighting": "N/A",
         "pic": "../images/park/park20.jpeg",
+        "amenities": [
+            "Fountain", "Playground"
+        ],
         "latitude": 1.3344575724350702, 
         "longtitude": 103.95071097745847,
         "property": "Park"

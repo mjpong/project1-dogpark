@@ -1,12 +1,17 @@
 let allCheckboxes = document.querySelectorAll('input[type=checkbox]');
+let allCheckedboxes = document.querySelectorAll('input[type=checkbox]:checked')
 let parkCheckboxes = document.querySelectorAll('.parkBox');
 let poolCheckboxes = document.querySelectorAll('.poolBox');
+let parkFilter = document.querySelector('btn-parkfilter');
+let poolFilter = document.querySelector('btn-poolfilter');
 
-for (let park of parkCheckboxes) {
-    for (park.checked == true) {
-        if (park.checked == i.area)
-    }
-}
+// filter results from load-data
+
+// for (let park of parkCheckboxes) {
+//     for (park.checked == true) {
+//         if (park.checked == i.area)
+//     }
+// }
 
 
 // allCheckboxes.forEach(allCheckboxes => allCheckboxes.addEventListener('click', handleCheck))

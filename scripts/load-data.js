@@ -24,7 +24,7 @@ let allData;
 async function loadParksData() {
     let response = await axios.get("../json-files/parks.json");
     let parksData = response.data;
-    console.log(parksData)
+
     for (let i of parksData.dog_parks) {
         allParksData.push({
             name: i.name,
@@ -32,6 +32,7 @@ async function loadParksData() {
             area: i.area,
             hours: i.hours,
             pic: i.pic,
+            amenities: i.amenities,
             lighting: i.lighting,
             latitude: i.latitude,
             longtitude: i.longtitude,
@@ -76,6 +77,7 @@ function createMarkers(coor, clusterLayer) {
                 <hr>
                 <p> Address: ${coor[i].address}</p>
                 <p> Opening Hours: ${coor[i].hours}</p>
+                <p> Amenities: ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
                 <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
                 `)
             L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer);
@@ -92,12 +94,74 @@ function createMarkers(coor, clusterLayer) {
             L.marker([coor[i].latitude, coor[i].longtitude], { icon: poolPin }).bindPopup(poolPopup).addTo(clusterLayer)
         }
     }
-        return clusterLayer;
+    return clusterLayer;
 
 }
 
+function splitByArea(data) {
+    let area = {
+        north: [],
+        east: [],
+        west: [],
+        central: []
+    }
+    for (let i of data) {
+        if (i.area == "North") {
+            area["north"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.area == "East") {
+            area["east"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.area == "West") {
+            area["west"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.area == "Central") {
+            area["central"].push(i.name, i.latitude, i.longtitude)
+        }
+    }
+
+    return area;
+}
+
+function splitByAmenities(data) {
+    console.log(data)
+    let pAmenities = {
+        fountain: [],
+        playground: [],
+        washroom: []
+    }
+    for (let i of data) {
+        if (i.amenities.includes("Fountain")) {
+            pAmenities["fountain"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.amenities.includes("Playground")) {
+            pAmenities["playground"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.amenities.includes("Washroom")) {
+            pAmenities["washroom"].push(i.name, i.latitude, i.longtitude)
+        }
+    }
+    return pAmenities;
+}
+
+function splitByPool(data) {
+    let pType = {
+        outdoor: [],
+        indoor: [],
+        hydrotherapy: []
+    }
+    for (let i of data) {
+        if (i.type == "Outdoor") {
+            pType["outdoor"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.type == "Indoor") {
+            pType["indoor"].push(i.name, i.latitude, i.longtitude)
+        } else if (i.type == "Hydrotherapy") {
+            pType["hydrotherapy"].push(i.name, i.latitude, i.longtitude)
+        }
+    }
+    return pType;
+}
 
 let allClusterLayer = L.markerClusterGroup().addTo(map);
+let parksByArea;
+let parkAmenities;
+let poolsByArea;
+let poolType;
 
 // Run all
 async function run() {
@@ -105,10 +169,16 @@ async function run() {
     let poolsData = await loadPoolsData()
 
     allData = [...parksData, ...poolsData];
+
     createMarkers(allData, allClusterLayer);
+    parksByArea = splitByArea(parksData);
+    parkAmenities = splitByAmenities(parksData);
+    poolsByArea = splitByArea(poolsData);
+    poolType = splitByPool(poolsData);
+    
+    console.log(parkAmenities)
 }
 
 run();
-
 
 
