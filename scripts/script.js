@@ -14,15 +14,8 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
     accessToken: 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw' //demo access token
 }).addTo(map);
 
-// Reset Map
-// document.querySelector("#reset").addEventListener("click", () => {
-
-// })
-
-
 // FUNCTIONS 
-
-// Toggle to show
+// info side bar - toggle to show
 document.getElementById("nav-toggle").addEventListener('click', function () {
     let isShown = false;
     for (let pane of document.querySelectorAll(".tab-pane")) {
@@ -30,7 +23,6 @@ document.getElementById("nav-toggle").addEventListener('click', function () {
             isShown = true;
         }
     }
-
     if (isShown) {
         for (let pane of document.querySelectorAll(".tab-pane")) {
             pane.classList.remove("show");

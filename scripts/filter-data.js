@@ -10,7 +10,14 @@ let poolAreaBox = document.querySelectorAll('.poolAreaBox');
 let parkFilter = document.querySelector('.btn-parkfilter');
 let poolFilter = document.querySelector('.btn-poolfilter');
 
+let smParkFilter = document.querySelector('.btn-smparkfilter');
+let smPoolFilter = document.querySelector('.btn-smpoolfilter');
 
+let smParkAreaBox = document.querySelectorAll('.smParkAreaBox');
+let smParkAmenitiesBox = document.querySelectorAll('.smParkAmenitiesBox');
+
+let smPoolTypeBox = document.querySelectorAll('.smPoolTypeBox');
+let smPoolAreaBox = document.querySelectorAll('.smPoolAreaBox');
 
 let filterClusterLayer = L.markerClusterGroup().addTo(map);
 
@@ -38,5 +45,21 @@ poolFilter.addEventListener("click",function(){
     map.setView(singapore, 12.4);
     checkFilters(poolAreaBox, poolsByArea);
     checkFilters(poolTypeBox, poolType)
+})
+
+smParkFilter.addEventListener("click", function(){
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
+    checkFilters(smParkAreaBox, parksByArea);
+    checkFilters(smParkAmenitiesBox, parkAmenities);
+})
+
+smPoolFilter.addEventListener("click",function(){
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
+    checkFilters(smPoolAreaBox, poolsByArea);
+    checkFilters(smPoolTypeBox, poolType)
 })
 
