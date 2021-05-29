@@ -4,6 +4,9 @@ const searchResult = document.getElementById('searchResult')
 const searchBtn = document.getElementById('btn-search')
 const resetBtn = document.getElementsByClassName('btn-reset')
 
+const smSearchQuery = document.getElementById('smSearchQuery')
+const smSearchResult = document.getElementById('smSearchResult')
+const smSearchBtn = document.getElementById('btn-smSearch')
 
 //getting search values
 
@@ -51,7 +54,22 @@ function getSearch(inputValue, allData) {
 
 let searchClusterLayer = L.markerClusterGroup();
 let searchValue = [];
-// click btn or press enter to search 
+let smSearchValue = [];
+
+//sm device
+smSearchBtn.addEventListener('click', function () {
+    let smUserSearch = smSearchQuery.value;
+    smSearchValue = getSearch(smUserSearch, allData);
+    allClusterLayer.clearLayers();
+    searchClusterLayer.clearLayers();
+    filterClusterLayer.clearLayers();
+    createMarkers(smSearchValue, searchClusterLayer);
+    searchClusterLayer.addTo(map);
+    map.setView(singapore, 12.4)
+
+})
+
+
 searchBtn.addEventListener('click', function () {
     let userSearch = searchQuery.value;
     searchValue = getSearch(userSearch, allData);
@@ -62,8 +80,7 @@ searchBtn.addEventListener('click', function () {
     // go through element , add to new cluster layer
     createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
-
-    showResults(searchValue)
+    showResults(searchValue);
 
 })
 
@@ -73,7 +90,7 @@ searchQuery.addEventListener("keyup", function (e) {
     }
 })
 
-// show results in searchResults + 
+
 
 function showResults(results) {
     searchResult.innerHTML = "";
@@ -82,10 +99,7 @@ function showResults(results) {
         searchResult.innerHTML +=
             `<p onClick="resultZoom(${count++})" class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
     }
-
-
 }
-
 
 function resultZoom(count) {
     allClusterLayer.clearLayers();

@@ -1,6 +1,6 @@
 // CUSTOM ICON MARKER ON MAP
 const parkPin = L.icon({
-    iconUrl: 'images/park-marker-solid.svg',
+    iconUrl: 'images/park-marker.svg',
     iconSize: [18.5, 42], // size of the icon
     iconAnchor: [22.5, 42], // point of the icon which will correspond to marker's location
 

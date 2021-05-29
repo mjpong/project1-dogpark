@@ -33,11 +33,9 @@ h6 {
 .tagline {
   font-size: 0.85rem;
   font-style: italic;
-  color: #616060
+  color: #616060;
+  padding-bottom: 0px;
 }
-
-
-/* Map + Popup */
 
 #map {
     height: 100vh;
@@ -57,12 +55,12 @@ h6 {
   font-family: 'Ubuntu', sans-serif;
   z-index: 1030;
   position: absolute;
-  right:25px;
-  top:180px;
+  right: 23px;
+  top: 165px;
 
 }
 
-#nav-filter-parks {
+#nav-filter-search {
   color: #FFA200;
 }
 
@@ -71,8 +69,8 @@ h6 {
   color: #005DFF;
 }
 
-#nav-filter-search {
-  color: #B9CD1B;
+#nav-filter-parks {
+  color: #009C5E;
 }
 
 #search-bar {
@@ -103,10 +101,6 @@ h6 {
 }
 
 
-/* Small devices (landscape phones, less than 768px) */
-@media (max-width: 767.98px) { 
-
-}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
@@ -131,6 +125,7 @@ h6 {
 
   #info-side-bar {
     font-size: 12.8px;
+    right: 20px;
   }
 
   #info-side-bar h6 {

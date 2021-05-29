@@ -136,28 +136,27 @@
   </div>
 
   <!-- Tagline -->
-  <div class="container-fluid d-none d-md-block">
-    <div class="row header">
-      <div class="col">
-        <p class="text-center tagline"> Find the best place to have a wooftastic day with your pup!</p>
-      </div>
+  <div class="container-fluid ">
+    <div class="row header d-flex justify-content-center mb-0 pb-0">
+        <p class="text-center tagline" > Find the best place to have a wooftastic day with your pup!</p>
     </div>
   </div>
 
   <!-- Info Nav for Mobile -->
   <div class="container-fluid d-block d-md-none">
     <!-- search -->
-    <div class="row search-header mb-2">
-      <div class="col">
+    <div class="row d-flex justify-content-center search-header mb-2">
+      <div class="col-9">
         <div class="input-group mx-auto" id="sm-search-bar">
           <input type="text" class="form-control rounded" id="smSearchQuery" placeholder="e.g. West or Park">
           <div class="input-group-append">
-            <button class="btn btn-sm btn-success border-white text-white" id="sm-btn-search">Search</button>
+            <button class="btn btn-sm btn-success border-white text-white" id="btn-smSearch">Search</button>
           </div>
         </div>
+        <div id="smSearchResult" class="m-0 p-0"></div>
       </div>
     </div>
-    <div class="row filter-header">
+    <div class="row filter-header mb-2">
       <!-- parks btn-->
       <div class="col-6 d-flex justify-content-end">
         <button class="btn btn-warning btn-sm dropdown-toggle" id="sm-park-btn" data-toggle="modal"
@@ -209,7 +208,8 @@
               <div class="modal-footer">
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn btn-smparkfilter btn-sm btn-success border-white text-white ">Filter</button>
+                    <button class="btn btn-smparkfilter btn-sm btn-success border-white text-white"
+                      data-dismiss="modal">Filter</button>
                   </div>
                   <div class="col-6 d-flex justify-content-end">
                     <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
@@ -220,11 +220,10 @@
           </div>
         </div>
       </div>
-      <!-- pools -->
+      <!-- pools btn -->
       <div class="col-6">
         <button class="btn btn-primary btn-sm dropdown-toggle" id="sm-pool-btn" data-toggle="modal"
-          data-target="#pool-filter-modal">Dog
-          Pools
+          data-target="#pool-filter-modal">Dog Pools
         </button>
         <!-- pool filter modal-->
         <div class="modal fade" id="pool-filter-modal" tabindex="-1" role="dialog" aria-labelledby="pool-filter-modal"
@@ -271,7 +270,8 @@
               <div class="modal-footer">
                 <div class="row">
                   <div class="col-6">
-                    <button class="btn btn-smpoolfilter btn-sm btn-success border-white text-white ">Filter</button>
+                    <button class="btn btn-smpoolfilter btn-sm btn-success border-white text-white"
+                      data-dismiss="modal">Filter</button>
                   </div>
                   <div class="col-6 d-flex justify-content-end">
                     <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
@@ -283,7 +283,14 @@
         </div>
       </div>
     </div>
-    <hr>
+    <div class="row">
+      <!-- reset btn -->
+      <div class="col d-flex justify-content-center">
+        <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
+      </div>
+    </div>
+  </div>
+  <hr class="d-block d-md-none">
   </div>
 
 
@@ -328,10 +335,10 @@
                   <input type="checkbox" class="parkAreaBox" value="north"> North
                 </div>
                 <div class="pt-1 filter-all">
-                  <input type="checkbox" class="parkAreaBox" value="east" > East
+                  <input type="checkbox" class="parkAreaBox" value="east"> East
                 </div>
                 <div class="pt-1 filter-all">
-                  <input type="checkbox" class="parkAreaBox" value="west" > West
+                  <input type="checkbox" class="parkAreaBox" value="west"> West
                 </div>
                 <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAreaBox" value="central"> Central
@@ -341,7 +348,7 @@
               <div class="col-6">
                 <p class="info-header">Amenities Includes</p>
                 <div class="pt-1 filter-all">
-                  <input type="checkbox" class="parkAmenitiesBox" value="fountain" > Water Fountain
+                  <input type="checkbox" class="parkAmenitiesBox" value="fountain"> Water Fountain
                 </div>
                 <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAmenitiesBox" value="playground"> Doggy
