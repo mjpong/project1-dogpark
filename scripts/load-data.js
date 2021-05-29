@@ -1,14 +1,14 @@
 // CUSTOM ICON MARKER ON MAP
 const parkPin = L.icon({
-    iconUrl: 'images/park-pin.svg',
-    iconSize: [15, 42], // size of the icon
+    iconUrl: 'images/park-marker-solid.svg',
+    iconSize: [18.5, 42], // size of the icon
     iconAnchor: [22.5, 42], // point of the icon which will correspond to marker's location
 
 });
 
 const poolPin = L.icon({
-    iconUrl: 'images/pool-pin.svg',
-    iconSize: [15, 42], // size of the icon
+    iconUrl: 'images/pool-marker-solid.svg',
+    iconSize: [18.5, 42], // size of the icon
     iconAnchor: [22.5, 42], // point of the icon which will correspond to marker's location
 
 });
@@ -79,7 +79,7 @@ function createMarkers(coor, clusterLayer) {
                     <p class="popup"> Address: ${coor[i].address}</p>
                     <p class="popup"> Opening Hours: ${coor[i].hours}</p>
                     <p class="popup"> Amenities: ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
-                    <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                    <p> <img class="responsive" src="${coor[i].pic}" style="width:275px; height:150px"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer);
             } else {
@@ -90,7 +90,7 @@ function createMarkers(coor, clusterLayer) {
                     <p class="popup"> Pool Type: ${coor[i].type.toString().replace(/,/g, ", ")}</p>
                     <p class="popup"> Price: $${coor[i].price}</p>
                     <p class="popup"> Opening Hours: ${coor[i].hours}</p>
-                    <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                    <p> <img class="responsive" src="${coor[i].pic}" style="width:275px; height:150px"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: poolPin }).bindPopup(poolPopup).addTo(clusterLayer)
             }

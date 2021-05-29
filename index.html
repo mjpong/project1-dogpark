@@ -43,18 +43,18 @@
     <div class="navbar-collapse collapse justify-content-between align-items-center w-100"
       id="navbar-supported-content">
       <ul class="navbar-nav mx-auto text-md-center text-left">
-        <li class="nav-item" style="display: flex; align-items:center">
+        <li class="nav-item" style="display:flex; align-items:center">
           <a style="font-weight:bold" class="nav-link text-center" href="#" data-toggle="modal"
-            data-target="#about-us-modal" style="display: flex; align-items:center;">About Us</a>
+            data-target="#about-us-modal" style="display:flex; align-items:center;">About Us</a>
         </li>
         <li class="nav-item my-auto">
           <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">
             <img src="images/woofday.jpeg" height="100" width="175" alt="">
           </a>
         </li>
-        <li class="nav-item" style="display: flex; align-items:center">
+        <li class="nav-item" style="display:flex; align-items:center">
           <a style="font-weight:bold" class="nav-link text-center" href="#" data-toggle="modal"
-            data-target="#contact-us-modal" style="display: flex; align-items:center;">Contact Us</a>
+            data-target="#contact-us-modal" style="display:flex; align-items:center;">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -163,10 +163,10 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" id="nav-filter-pools" data-toggle="tab" href="#nav-dogpools" role="tab"
-            aria-controls="filter" aria-selected="false"><i class="fas fa-swimming-pool"></i> Dog Pools</a>
+            aria-controls="filter" aria-selected="false"><i class="fas fa-water"></i> Dog Pools</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="nav-search-results" data-toggle="tab" href="#nav-search" role="tab"
+          <a class="nav-link" id="nav-filter-search" data-toggle="tab" href="#nav-search" role="tab"
             aria-controls="search" aria-selected="false"><i class="fas fa-search"></i> Search</a>
         </li>
         <li class="nav-item">
@@ -176,7 +176,7 @@
       </ul>
 
       <!-- all tab content -->
-      <div class="tab-content shadow" id="myTabContent">
+      <div class="tab-content shadow my-tab-content" id="myTabContent">
 
         <!-- Dog park tab -->
         <div class="tab-pane fade" id="nav-dogparks" role="tabpanel" aria-labelledby="nav-dogparks">
@@ -186,30 +186,30 @@
             <div class="row">
               <div class="col-6">
                 <p class="info-header">Region</b>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAreaBox" value="north" id="park-north"> North
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAreaBox" value="east" id="park-east"> East
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAreaBox" value="west" id="park-west"> West
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAreaBox" value="central" id="park-central"> Central
                 </div>
-
               </div>
+              
               <div class="col-6">
                 <p class="info-header">Amenities Includes</p>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAmenitiesBox" value="fountain" id="park-fountain"> Water Fountain
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAmenitiesBox" value="playground" id="park-playground"> Doggy
                   Playground
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="parkAmenitiesBox" value="washroom" id="park-washroom"> Washroom
                 </div>
               </div>
@@ -217,10 +217,10 @@
             <hr>
             <div class="row">
               <div class="col-6">
-                <button class="btn btn-parkfilter btn-sm btn-primary border-white text-white ">Filter</button>
+                <button class="btn btn-parkfilter btn-sm btn-success border-white text-white ">Filter</button>
               </div>
-              <div class="col-6">
-                <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
+              <div class="col-6 d-flex justify-content-end">
+                <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
               </div>
             </div>
 
@@ -236,29 +236,29 @@
             <div class="row">
               <div class="col-6">
                 <p class="info-header">Region</p>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolAreaBox" value="north" id="pool-north"> North
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolAreaBox" value="east" id="pool-east"> East
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolAreaBox" value="west" id="pool-west"> West
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolAreaBox" value="central" id="pool-central"> Central
                 </div>
 
               </div>
               <div class="col-6">
                 <p class="info-header">Type</p>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolTypeBox" value="outdoor" id="pool-outdoor"> Outdoor
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolTypeBox" value="indoor" id="pool-indoor"> Indoor
                 </div>
-                <div class="pt-1">
+                <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolTypeBox" value="hydrotherapy" id="pool-hydro"> Hydrotherapy
                 </div>
               </div>
@@ -266,10 +266,10 @@
             <hr>
             <div class="row">
               <div class="col-6">
-                <button class="btn btn-poolfilter btn-sm btn-primary border-white text-white ">Filter</button>
+                <button class="btn btn-poolfilter btn-sm btn-success border-white text-white ">Filter</button>
               </div>
-              <div class="col-6">
-                <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
+              <div class="col-6 d-flex justify-content-end">
+                <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
               </div>
             </div>
 
@@ -285,8 +285,7 @@
                 <div class="input-group mx-auto" id="search-bar">
                   <input type="text" class="form-control rounded" id="searchQuery" placeholder="e.g. West or Park">
                   <div class="input-group-append">
-                    <button class="input-group-text" id="btn-search"><i class="fas fa-search" aria-hidden="true"></i>
-                    </button>
+                    <button class="btn btn-sm btn-success border-white text-white" id="btn-search">Search</button>
                   </div>
                 </div>
                 <hr>
@@ -298,7 +297,7 @@
             <hr>
             <div class="row">
               <div class="col">
-                <button class="btn btn-reset btn-sm btn-success border-white text-white ">Reset</button>
+                <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
               </div>
             </div>
           </div>

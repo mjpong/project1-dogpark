@@ -11,19 +11,29 @@ body {
 
 h6 {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
+
 }
 
 /* Nav */
 
 .modal-title {
   font-family: 'Roboto', sans-serif;
+  color: #494447
 }
 
+#about-us-modal {
+  color: #6d6669
+}
+
+#contact-us-modal{
+  color:#6d6669
+}
 
 .tagline {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   font-style: italic;
+  color: #616060
 }
 
 
@@ -43,12 +53,26 @@ h6 {
 /* Info Bar */
 
 #info-side-bar{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   font-family: 'Ubuntu', sans-serif;
   z-index: 1030;
   position: absolute;
   right:25px;
   top:180px;
+
+}
+
+#nav-filter-parks {
+  color: #FFA200;
+}
+
+
+#nav-filter-pools {
+  color: #005DFF;
+}
+
+#nav-filter-search {
+  color: #B9CD1B;
 }
 
 #search-bar {
@@ -58,14 +82,21 @@ h6 {
 #searchResult{
   height: 200px;
   overflow-y: scroll;
-
 }
 
 .info-header {
   font-weight: bold;
+  font-size: 15px;
   margin-bottom: 0px;
 }
 
+.filter-all {
+  font-size: 14px;
+}
+
+.pResults {
+  font-size: 14px;
+}
 .pResults:hover {
   cursor: pointer;
   text-decoration: underline;
@@ -79,13 +110,63 @@ h6 {
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
-  #info-side-bar {
-    font-size: 0.8rem; 
+
+  /* popup */
+  h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
   }
- #info-side-bar h6 {
-   font-size: 0.8rem; 
- }
+
+  .popup {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+  }
+
+  #pic-popup {
+    width: 250px;
+    height: 125px;
+  }
+  
+  /* info nav bar */
+
+  #info-side-bar {
+    font-size: 12.8px;
+  }
+
+  #info-side-bar h6 {
+    font-size: 12.8px; 
+  }
+
+  #searchQuery{
+    font-size: 12.8px;  
+  }
+
+  #searchResult{
+    height: 150px;
+    overflow-y: scroll;
+  }
+  
+  .btn-parkfilter, .btn-poolfilter, .btn-reset {
+    font-size: 12.8px;
+  }
+
+  .info-header {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 0px;
+  }
+  
+  .filter-all {
+    font-size: 12px;
+  }
+  
+  .pResults {
+    font-size: 12px;
+  }
 }
+}
+
+
 
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
