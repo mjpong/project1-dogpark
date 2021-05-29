@@ -78,12 +78,11 @@ searchQuery.addEventListener("keyup", function (e) {
 function showResults(results) {
     searchResult.innerHTML = "";
     let count = 0;
-
     for (let i of results) {
         searchResult.innerHTML +=
-            `<p onClick="resultZoom(${count++})" class = "pResults"> ${i.name} - ${i.property}, ${i.area}</p>`
-
+            `<p onClick="resultZoom(${count++})" class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
     }
+
 
 }
 

@@ -20,9 +20,10 @@
     integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style/style.css">
+
+
 
   <title>woofday</title>
 
@@ -43,8 +44,8 @@
       id="navbar-supported-content">
       <ul class="navbar-nav mx-auto text-md-center text-left">
         <li class="nav-item" style="display: flex; align-items:center">
-          <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#about-us-modal"
-            style="display: flex; align-items:center;">About Us</a>
+          <a style="font-weight:bold" class="nav-link text-center" href="#" data-toggle="modal"
+            data-target="#about-us-modal" style="display: flex; align-items:center;">About Us</a>
         </li>
         <li class="nav-item my-auto">
           <a class="nav-link navbar-brand mx-0 d-none d-md-inline" href="">
@@ -52,8 +53,8 @@
           </a>
         </li>
         <li class="nav-item" style="display: flex; align-items:center">
-          <a class="nav-link text-center" href="#" data-toggle="modal" data-target="#contact-us-modal"
-            style="display: flex; align-items:center;">Contact Us</a>
+          <a style="font-weight:bold" class="nav-link text-center" href="#" data-toggle="modal"
+            data-target="#contact-us-modal" style="display: flex; align-items:center;">Contact Us</a>
         </li>
       </ul>
     </div>
@@ -144,7 +145,7 @@
   </div>
 
   <!-- Info Nav for Mobile -->
-  <div class = "row container d-block"></div>
+  <div class="row container d-block"></div>
 
 
 
@@ -184,7 +185,7 @@
             <hr>
             <div class="row">
               <div class="col-6">
-                <b>Region</b>
+                <p class="info-header">Region</b>
                 <div class="pt-1">
                   <input type="checkbox" class="parkAreaBox" value="north" id="park-north"> North
                 </div>
@@ -200,7 +201,7 @@
 
               </div>
               <div class="col-6">
-                <b>Amenities</b>
+                <p class="info-header">Amenities Includes</p>
                 <div class="pt-1">
                   <input type="checkbox" class="parkAmenitiesBox" value="fountain" id="park-fountain"> Water Fountain
                 </div>
@@ -234,7 +235,7 @@
             <hr>
             <div class="row">
               <div class="col-6">
-                <b>Region</b>
+                <p class="info-header">Region</p>
                 <div class="pt-1">
                   <input type="checkbox" class="poolAreaBox" value="north" id="pool-north"> North
                 </div>
@@ -250,9 +251,7 @@
 
               </div>
               <div class="col-6">
-
-
-                <b>Type</b>
+                <p class="info-header">Type</p>
                 <div class="pt-1">
                   <input type="checkbox" class="poolTypeBox" value="outdoor" id="pool-outdoor"> Outdoor
                 </div>

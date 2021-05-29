@@ -76,9 +76,9 @@ function createMarkers(coor, clusterLayer) {
                 let parkPopup = L.popup().setContent(`
                     <h6>${coor[i].name}</h6>
                     <hr>
-                    <p> Address: ${coor[i].address}</p>
-                    <p> Opening Hours: ${coor[i].hours}</p>
-                    <p> Amenities: ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
+                    <p class="popup"> Address: ${coor[i].address}</p>
+                    <p class="popup"> Opening Hours: ${coor[i].hours}</p>
+                    <p class="popup"> Amenities: ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
                     <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer);
@@ -86,10 +86,10 @@ function createMarkers(coor, clusterLayer) {
                 let poolPopup = L.popup().setContent(`
                     <h6>${coor[i].name}</h6>
                     <hr>
-                    <p> Address: ${coor[i].address}</p>
-                    <p> Pool Type: ${coor[i].type.toString().replace(/,/g, ", ")}</p>
-                    <p> Price: $${coor[i].price}</p>
-                    <p> Opening Hours: ${coor[i].hours}</p>
+                    <p class="popup"> Address: ${coor[i].address}</p>
+                    <p class="popup"> Pool Type: ${coor[i].type.toString().replace(/,/g, ", ")}</p>
+                    <p class="popup"> Price: $${coor[i].price}</p>
+                    <p class="popup"> Opening Hours: ${coor[i].hours}</p>
                     <p> <img src="${coor[i].pic}" style="width:275px; height:150px"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: poolPin }).bindPopup(poolPopup).addTo(clusterLayer)
@@ -127,7 +127,10 @@ function splitByAmenities(data) {
     let pAmenities = {
         fountain: [],
         playground: [],
-        washroom: []
+        washroom: [],
+        fountainPlayground: [],
+        fountainWashroom: [],
+        playgroundWashroom: [],
     }
     for (let i of data) {
 
@@ -140,6 +143,7 @@ function splitByAmenities(data) {
         if (i.amenities.includes("Washroom")) {
             pAmenities["washroom"].push(i)
         }
+
     }
     return pAmenities;
 }
