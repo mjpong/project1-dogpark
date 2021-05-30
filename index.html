@@ -138,7 +138,7 @@
   <!-- Tagline -->
   <div class="container-fluid ">
     <div class="row header d-flex justify-content-center mb-0 pb-0">
-        <p class="text-center tagline" > Find the best place to have a wooftastic day with your pup!</p>
+      <p class="text-center tagline"> Find the best place to have a wooftastic day with your pup!</p>
     </div>
   </div>
 
@@ -149,14 +149,14 @@
       <div class="col-9">
         <div class="input-group mx-auto" id="sm-search-bar">
           <input type="text" class="form-control rounded" id="smSearchQuery" placeholder="e.g. West or Park">
-          <div class="input-group-append">
+          <div class="input-group-append dropdown">
             <button class="btn btn-sm btn-success border-white text-white" id="btn-smSearch">Search</button>
           </div>
         </div>
-        <div id="smSearchResult" class="m-0 p-0"></div>
+        <div id="smSearchResult" class=""></div>
       </div>
-    </div>
-    <div class="row filter-header mb-2">
+    </div>  
+    <div class=" row filter-header mb-2">
       <!-- parks btn-->
       <div class="col-6 d-flex justify-content-end">
         <button class="btn btn-warning btn-sm dropdown-toggle" id="sm-park-btn" data-toggle="modal"
@@ -250,19 +250,22 @@
                       <input type="checkbox" class="smPoolAreaBox" value="west" id="pool-west"> West
                     </div>
                     <div class="pt-1 filter-all">
-                      <input type="checkbox" class="smPoolAreaBox" value="central" id="pool-central"> Central
+                      <input type="checkbox" class="smPoolAreaBox" value="central" id="pool-central">
+                      Central
                     </div>
                   </div>
                   <div class="col-12">
                     <p class="info-header">Type</p>
                     <div class="pt-1 filter-all">
-                      <input type="checkbox" class="smPoolTypeBox" value="outdoor" id="pool-outdoor"> Outdoor
+                      <input type="checkbox" class="smPoolTypeBox" value="outdoor" id="pool-outdoor">
+                      Outdoor
                     </div>
                     <div class="pt-1 filter-all">
                       <input type="checkbox" class="smPoolTypeBox" value="indoor" id="pool-indoor"> Indoor
                     </div>
                     <div class="pt-1 filter-all">
-                      <input type="checkbox" class="smPoolTypeBox" value="hydrotherapy" id="pool-hydro"> Hydrotherapy
+                      <input type="checkbox" class="smPoolTypeBox" value="hydrotherapy" id="pool-hydro">
+                      Hydrotherapy
                     </div>
                   </div>
                 </div>
@@ -404,7 +407,8 @@
                   <input type="checkbox" class="poolTypeBox" value="indoor" id="pool-indoor"> Indoor
                 </div>
                 <div class="pt-1 filter-all">
-                  <input type="checkbox" class="poolTypeBox" value="hydrotherapy" id="pool-hydro"> Hydrotherapy
+                  <input type="checkbox" class="poolTypeBox" value="hydrotherapy" id="pool-hydro">
+                  Hydrotherapy
                 </div>
               </div>
             </div>
@@ -435,7 +439,6 @@
                 </div>
                 <hr>
                 <div id="searchResult" class="m-0 p-0">
-
                 </div>
               </div>
             </div>

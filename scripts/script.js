@@ -64,6 +64,8 @@ for (let btn of resetBtns) {
         map.setView(singapore, 12.4);
         searchResult.innerHTML = "";
         searchQuery.value = "";
+        smSearchResult.innerHTML = "";
+        smSearchQuery.value = "";
         $('input[type=checkbox]').each(function () {
             this.checked = false;
         });

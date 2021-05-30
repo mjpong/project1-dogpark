@@ -65,8 +65,7 @@ smSearchBtn.addEventListener('click', function () {
     filterClusterLayer.clearLayers();
     createMarkers(smSearchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
-    map.setView(singapore, 12.4)
-
+    // showResults(smSearchValue, smSearchResult);
 })
 
 
@@ -80,7 +79,7 @@ searchBtn.addEventListener('click', function () {
     // go through element , add to new cluster layer
     createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
-    showResults(searchValue);
+    showResults(searchValue, searchResult);
 
 })
 
@@ -92,14 +91,42 @@ searchQuery.addEventListener("keyup", function (e) {
 
 
 
-function showResults(results) {
-    searchResult.innerHTML = "";
+// function showResults(results) {
+//     searchResult.innerHTML = "";
+//     let count = 0;
+//     for (let i of results) {
+//         searchResult.innerHTML +=
+//             `<p onClick="resultZoom(${count++})" class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
+//     }
+// }
+
+function showResults(results, userResults) {
+    userResults.innerHTML ="";
     let count = 0;
     for (let i of results) {
-        searchResult.innerHTML +=
-            `<p onClick="resultZoom(${count++})" class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
+        userResults.innerHTML +=
+            `<p onClick="resultZoom(${count++})" class= "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
+
     }
 }
+
+// function smShowResults(results, userResults){
+//     userResults.innerHTML ="";
+//     let count = 0;
+//     for (let i of results) {
+//         userResults.innerHTML +=
+//             `<p onCLick="smResultZoom(${count++}) class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
+
+//     }
+// }
+
+// function smResultZoom(count) {
+//     allClusterLayer.clearLayers();
+//     searchClusterLayer.clearLayers();
+//     filterClusterLayer.clearLayers();
+//     let resultLayer = createMarkers([searchValue[count]], searchClusterLayer);
+//     map.setView([searchValue[count].latitude, searchValue[count].longtitude + 0.001], 18);
+// }
 
 function resultZoom(count) {
     allClusterLayer.clearLayers();

@@ -100,7 +100,13 @@ h6 {
   text-decoration: underline;
 }
 
-
+/* Small devices */
+@media (min-width: 576px) {
+  #smSearchResult {
+    height: 200px;
+    overflow-y: scroll;
+  }
+}
 
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
