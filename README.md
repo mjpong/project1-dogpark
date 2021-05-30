@@ -1,5 +1,5 @@
 
-<img src="images/mockup1.png" style="margin: 0;">
+<img src="images/mockup/mockup1.png" style="margin: 0;">
 
 ## woofday
 
@@ -9,10 +9,10 @@ As a dog owner, it is hard to be able to easily find all the places you can brin
 The live demo website can be accessed here: 
 
 ## UI / UX
-**Objective**
+### Objectives
 For the UI / UX of this app, is to keep it simple, clean and easy to use. After narrowing down the different criteria that the user story mentions, the web app makes sure that the user should be able to easily search and filter by the different parks and pool locations, to plan for their trip with their dog. 
 
-**User Stories**
+### User Stories
 > 1. The information on Google and Google maps are not always right, I have been to the location listed and it was wrong
 > 2. It is easier to have it all categorized in one place.
 > 3. Some of the parks that search engine provides are normal parks and not actual dog parks, some which dogs are not allowed there.
@@ -36,23 +36,23 @@ _Non-functional requirements_
 
 
 ## Structure 
-**Content Info** 
+### Content Info
 This is a one page app website that is split into a few different sections, the navbar, map, function tabs.
 
-***Map***
+### Map
 In the map section, there is the function tab that is on the side which is then organized into three different tabs that will be further explained below.
 There are different markers on the map that are separated in to two different cluster layers.
 
-***Search***
-<img src="images/mockup3.png" style="margin: 0;">
+### Search
+<img src="images/mockup/mockup3.png" style="margin: 0;">
 
 * With the results, users has the option to click on the result they want and it will lead them to the marker, zoomed in on the map.
 * Upon clicking the markers, details of the parks and pools will be displayed, including the images.
 * Users can remove all previous search layers by clicking on the reset button.
 * Users can search and explore more in this search bar.
 
-***Filter***
-<img src="images/mockup2.png" style="margin: 0;">
+### Filter
+<img src="images/mockup/mockup2.png" style="margin: 0;">
 
 * Users can switch between the "Dog Parks" and the "Dog Pools" tabs to choose the different filters.
 * Under the category of Dog Parks, the regions and amenities can be filtered.
@@ -61,12 +61,12 @@ There are different markers on the map that are separated in to two different cl
 ## Mobile Responsiveness
 The web app is mobile responsive and adjusted according to the different sizes of the screen. Due to the map being the main part of the app, some elements of the map, such as the collapsible tab has to be taken away from the map in a mobile version. Another type of search bar was issued instead.
 
-**Layout**
+## Layer
 
-**Collapsible Tab**
+### Collapsible Tab
 * This tab is collapsible to ensure that the map can be easily read after the user searches or filters different items.
 
-**Colors**
+### Colors
 * Triadic color combination was used to separate the three different categories to be easily identifiable to the user
 * Everything under parks, the color green was used as this relates the most to the term "park", it was also a different shade as not to clash with the map colors.
 * Everything under pools, the color blue was used as this relates the most to the term "pool", this shade of blue was also used to differenciate easier from the routes in the map.
@@ -74,37 +74,27 @@ The web app is mobile responsive and adjusted according to the different sizes o
 
 <img src="images/colorwheel.png" style="margin: 0;">
 
-**Typography**
+### Typography
 * sans-serif font (Ubuntu and Roboto) were used to keep it clean and simple to use and have a contrast with the brand logo
 * Font size is set to adjust according to the different device size, easier to read and understand
 
-**Map Icon**
+### Map Icon
 * Instead of the marker that came with leaflet, the icon used was more solid, and the color is the same as the info side bar, and categorized by parks and pools.
 
 ## Testing
 
 |Category|Input / Actions|Output / Errors
-|----|-----|------------|
 |Overall|Mobile Responsive|No error|
-|----|-----|------------|
 |Nav Bar|About Us|Modal popup opens and closes|
-|----|-----|------------|
 |Nav Bar|Contact Us|Modal popup opens and closes, user must enter name and contact, or else an alert will popup|
-|----|-----|------------|
 |Map|On load / Click|All markers and details shown|
-|----|-----|------------|
 |Info Side Bar|Mobile Responsive|No error, disappears on smaller devices and changes into a row under the navbar instead|
-|----|-----|------------|
 |Info Side Bar|Tabs switching|Different tabs show and can be easily switched|
-|----|-----|------------|
 |Info Side Bar|Search|Can search on click or enter, results will be list out|
-|----|-----|------------|
 |Info Side Bar|Search Results|Results can be clicked and will zoomed into the particular marker and map view|
-|----|-----|------------|
 |Info Side Bar|Filter|All checkboxes can be clicked and filtered upon clicking|
-|----|-----|------------|
 |Info Side Bar|Reset Button|Everything resets, map, checkboxes and searchbar|
-|----|-----|------------|
+
 
 
 ## Technology

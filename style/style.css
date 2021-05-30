@@ -102,10 +102,10 @@ h6 {
 
 /* Small devices */
 @media (min-width: 576px) {
-  #smSearchResult {
+  /* #smSearchResult {
     height: 200px;
     overflow-y: scroll;
-  }
+  } */
 }
 
 /* Medium devices (tablets, less than 992px) */
