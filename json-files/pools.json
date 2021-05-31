@@ -10,7 +10,7 @@
                 "latitude": 1.3381462118958838, 
                 "longtitude": 103.80338287754512,
                 "type": ["Outdoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "The Wagington Bone Pool",
@@ -22,7 +22,7 @@
                 "latitude": 1.3070145317693231, 
                 "longtitude": 103.81923478503572,
                 "type": ["Outdoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Wag & Wild",
@@ -34,7 +34,7 @@
                 "latitude": 1.3368999950982052, 
                 "longtitude": 103.74625304244435,
                 "type": ["Outdoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "The Naked Pet",
@@ -46,7 +46,7 @@
                 "latitude": 1.316124579231091, 
                 "longtitude": 103.92668563504569,
                 "type": ["Indoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Sun Petgamart",
@@ -58,7 +58,7 @@
                 "latitude": 1.4129879639044798, 
                 "longtitude": 103.74791580436015,
                 "type": ["Indoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Pet Stop",
@@ -72,7 +72,7 @@
                 "type": [
                     "Indoor Pool", "Hydrotherapy Pool"
                 ],
-                "property": "Pool"
+                "property": "Dog Pool"
        
             },
             {
@@ -85,7 +85,7 @@
                 "latitude": 1.3571375672073558, 
                 "longtitude": 103.87621886203152,
                 "type": ["Indoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Hydro Paws Plus",
@@ -97,7 +97,7 @@
                 "latitude": 1.3821991600493115, 
                 "longtitude": 103.83194317300443,
                 "type": ["Indoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Canine Wellness and Rehab Center",
@@ -111,7 +111,7 @@
                 "type": [
                     "Indoor Pool", "Hydrotherapy Pool"
                 ],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Barker and Pooch",
@@ -123,7 +123,7 @@
                 "latitude": 1.3116722757044263, 
                 "longtitude": 103.91172864799327,
                 "type": ["Indoor Pool"],
-                "property": "Pool"
+                "property": "Dog Pool"
             },
             {
                 "name": "Hydro Canine",
@@ -137,7 +137,7 @@
                 "type": [
                     "Indoor Pool", "Hydrotherapy Pool"
                 ],
-                "property": "Pool"
+                "property": "Dog Pool"
             }
     ]
     

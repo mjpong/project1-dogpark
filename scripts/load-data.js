@@ -70,7 +70,7 @@ function createMarkers(coor, clusterLayer) {
     if (coor.length != null) {
         for (let i = 0; i < coor.length; i++) {
             coor[i].area
-            if (coor[i].property == "Park") {
+            if (coor[i].property == "Dog Park") {
                 let parkPopup = L.popup().setContent(`
                     <h6>${coor[i].name}</h6>
                     <hr>

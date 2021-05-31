@@ -18,8 +18,9 @@ function getSearch(inputValue, allData) {
         let address = i.address.toLowerCase()
         let area = i.area.toLowerCase()
         let property = i.property.toLowerCase()
-        if (name.includes(input) || (address.includes(input)) || (area.includes(input)) || (property.includes(input))) {
-            if (i.property == "Park") {
+        if(property == "dog park"){
+            let amenities = i.amenities.toString().toLowerCase()
+            if (name.includes(input) || (address.includes(input)) || (area.includes(input)) || (property.includes(input)) || (amenities.includes(input))) {
                 search.push({
                     'name': i.name,
                     'address': i.address,
@@ -32,7 +33,10 @@ function getSearch(inputValue, allData) {
                     'longtitude': i.longtitude,
                     'property': i.property
                 })
-            } else {
+            }
+        } else{
+            let type = i.type.toString().toLowerCase()
+            if (name.includes(input) || (address.includes(input)) || (area.includes(input)) || (property.includes(input)) || (type.includes(input))) {
                 search.push({
                     'name': i.name,
                     'address': i.address,

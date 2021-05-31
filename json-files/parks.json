@@ -12,7 +12,7 @@
         ],
         "latitude": 1.3633964754734702,
         "longtitude": 103.84358391789335,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Bishan Summit Dog Park",
@@ -26,7 +26,7 @@
         ],
         "latitude": 1.3476979681227628,  
         "longtitude": 103.85085050852403,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Tampines Central Park Dog Run",
@@ -40,7 +40,7 @@
         ],
         "latitude": 1.358175613376079,
         "longtitude": 103.9460209463029,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Sebawang Dog Run",
@@ -54,7 +54,7 @@
         ],
         "latitude": 1.4613222312273142, 
         "longtitude": 103.8360921046562,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Yishun Park Dog Run",
@@ -68,7 +68,7 @@
         ],
         "latitude": 1.4294822462314574,
         "longtitude": 103.84160494023173,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Potong Pasir Ave 1 Dog Run",
@@ -82,7 +82,7 @@
         ],
         "latitude": 1.3332706248519737, 
         "longtitude": 103.86894408552565,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Pasir Ris Street 51 Dog Run",
@@ -96,7 +96,7 @@
         ],
         "latitude": 1.368662268108972,
         "longtitude": 103.96222909854168,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Mariam Way Dog Run",
@@ -110,7 +110,7 @@
         ],
         "latitude": 1.365011927994062,
         "longtitude": 103.96950015247067,
-        "property": "Park"
+        "property": "Dog Park"
 
     },
     {
@@ -125,7 +125,7 @@
         ],
         "latitude": 1.3309099300154223, 
         "longtitude": 103.92693320343074,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Bedok Town Park Dog Run",
@@ -139,7 +139,7 @@
         ],
         "latitude": 1.3359005913903679,
         "longtitude": 103.92653114783666,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Tiong Bahru Dog Run",
@@ -153,7 +153,7 @@
         ],
         "latitude": 1.286768144084842, 
         "longtitude": 103.83723975701105,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Clementi Woods Park Dog Run",
@@ -167,7 +167,7 @@
         ],
         "latitude": 1.3070184473838926, 
         "longtitude": 103.78684842227442,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Koon Seng Park Dog Run",
@@ -181,7 +181,7 @@
         ],
         "latitude": 1.3111320476810617,
         "longtitude": 103.90343645025615,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Jurong Lake Park Dog Run",
@@ -195,7 +195,7 @@
         ],
         "latitude": 1.3337629981654435, 
         "longtitude": 103.72754365374226,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "West Coast Park Dog Run",
@@ -209,7 +209,7 @@
         ],
         "latitude": 1.291165131436203,  
         "longtitude": 103.77495876379946,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Kim Seng Park",
@@ -223,7 +223,7 @@
         ],
         "latitude": 1.293964871836445, 
         "longtitude": 103.8369710170216,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Katong Park Dog Run",
@@ -237,7 +237,7 @@
         ],
         "latitude": 1.2966686512880863,
         "longtitude": 103.88539444389426,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "East Coast Park Dog Run",
@@ -251,7 +251,7 @@
         ],
         "latitude": 1.3012615480351248, 
         "longtitude": 103.909883178204,
-        "property": "Park"
+        "property": "Dog Park"
     },
     {
         "name": "Our Space @ Tai Gin",
@@ -265,7 +265,7 @@
         ],
         "latitude": 1.3288101528987881, 
         "longtitude": 103.84716390351184,
-        "property": "Park"
+        "property": "Dog Park"
     },    
     {
         "name": "Simpang Bedok Dog Run",
@@ -279,7 +279,7 @@
         ],
         "latitude": 1.3344575724350702, 
         "longtitude": 103.95071097745847,
-        "property": "Park"
+        "property": "Dog Park"
     }   
     ]   
 }
