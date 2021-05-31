@@ -1,5 +1,6 @@
 // Map - Adding base map, sg latlng, setview
 let singapore = [1.3141086427175888, 103.83809046978706];
+let smSingapore = [1.278156, 103.819120];
 let map = L.map('map').setView(singapore, 12.4);
 
 // Tile Layers

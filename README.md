@@ -53,6 +53,7 @@ There are different markers on the map that are separated in to two different cl
 * Upon clicking the markers, details of the parks and pools will be displayed, including the images.
 * Users can remove all previous search layers by clicking on the reset button.
 * Users can search and explore more in this search bar.  
+* The next step would be adding a hyperlink that will lead to the different pool websites
 <br/>
 
 
@@ -106,10 +107,12 @@ The web app is mobile responsive and adjusted according to the different sizes o
 |Info Side Bar |Tabs switching                 |Different tabs show and can be easily switched                                                                |
 |Info Side Bar |Search                         |Can search on click or enter, results will be list out                                                        |
 |Info Side Bar |Search Results / input "west"  |Results with the key word "west" shown, can be clicked and will zoomed into the particular marker and map view|
+|Info Side Bar |Search Results / input "south" |As there are no results, "Results not found" will be shown to the user
 |Info Side Bar |Filter                         |All checkboxes can be clicked and filtered upon clicking                                                      |
 |Info Side Bar |Reset Button                   |Everything resets, map, checkboxes and searchbar                                                              |
 |Nav Search Bar|Mobile Responsive              |Shows up when in small device mode under the logo                                                             |
 |Nav Search Bar|Search Button / input "east"   |Results with the key word "east" shown as markers on the map, need to scroll to click on different ones       |
+|Nav Search Bar|Search Button / input "south"  |Alert popup with "Results not found" as there are no results for "South"                                      |
 |Nav Search Bar|Dog park / pool filter button  |Different filter shows different results on the map                                                           |
 
 

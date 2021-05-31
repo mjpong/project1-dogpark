@@ -71,6 +71,7 @@ smSearchBtn.addEventListener('click', function () {
     filterClusterLayer.clearLayers();
     createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
+    map.setView(smSingapore,11);
     // showresults() to be added in future
     // showResults(searchValue, smSearchResult);
 })
