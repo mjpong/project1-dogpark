@@ -38,7 +38,15 @@ _Non-functional requirements_
 
 ## Structure 
 ### Content Info
-This is a one page app website that is split into a few different sections, the navbar, map, function tabs.
+This is a one page app website that is split into a few different sections, the navbar, map, function tabs. 
+1. When the user first clicks on the website, they can learn more about woofday by clicking the "About Us" or "Contact Us" links, where they can fill in the information in the form on the modal.
+2. The user then has a choice to either scroll through the map to click around the different map markers that are already shown in the map. Green markers are for the Dog Parks, blue markers for the Dog Pools.
+3. On the right, there is a toggle tab pane where users can choose to either filter through the different categories of "Dog Parks" or "Dog Pools", or choose to "Search" on their own.
+4. For the filter, users can check the different filter categories they want and the map will list out the results in a cluster layer as markers. The users can then look on the map to see what they have filtered.
+5. For the search bar, users can enter keywords that appear in the different park names. For example, "East Coast" or "Dog Run" or "Wag" or "Bone" will come up with different results and will be represented as a list under the search bar. 
+6. If the user wants to learn more about the particular location, they can click on the name of the result and it will lead them to a zoomed version of the pop up marker where the details of the park or pool will be shown to them.
+7. All this can be reset at any time by clicking on any of the reset buttons on either the search or filter function tabs.
+
 
 ### Map
 In the map section, there is the function tab that is on the side which is then organized into three different tabs that will be further explained below.
@@ -53,7 +61,7 @@ There are different markers on the map that are separated in to two different cl
 * Upon clicking the markers, details of the parks and pools will be displayed, including the images.
 * Users can remove all previous search layers by clicking on the reset button.
 * Users can search and explore more in this search bar.  
-* The next step would be adding a hyperlink that will lead to the different pool websites
+* The next step would be adding a hyperlink that will lead to the different pool websites 
 <br/>
 
 
@@ -143,4 +151,4 @@ This web app is hosted using Netlify.
 
 * [pexels](https://www.pexels.com) for all the dog park and pool pictures used
 * [squadhelp](https://www.squadhelp.com) for the brand logo and name
-* Deployed through instructions from [TGC's deployment guide](https://docs.google.com/document/d/1f_aYsk4qqjYjkrWMOK5E2wS6hlasZL-ov7Q05ccSv9c/edit?usp=sharing)
+* Deployed through instructions from [TGC's deployment guide](https://docs.google.com/document/d/1f_aYsk4qqjYjkrWMOK5E2wS6hlasZL-ov7Q05ccSv9c/edit?usp=sharing), put together by Paul Chor.
