@@ -58,6 +58,10 @@ let searchValue = [];
 smSearchBtn.addEventListener('click', function () {
     let smUserSearch = smSearchQuery.value;
     searchValue = getSearch(smUserSearch, allData);
+    console.log(searchValue);
+    if(searchValue.length == 0){
+        alert("Results not found");
+    }
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     filterClusterLayer.clearLayers();
@@ -71,14 +75,19 @@ smSearchBtn.addEventListener('click', function () {
 searchBtn.addEventListener('click', function () {
     let userSearch = searchQuery.value;
     searchValue = getSearch(userSearch, allData);
-    //empty layers
-    allClusterLayer.clearLayers();
-    searchClusterLayer.clearLayers();
-    filterClusterLayer.clearLayers();
-    // go through element , add to new cluster layer
-    createMarkers(searchValue, searchClusterLayer);
-    searchClusterLayer.addTo(map);
-    showResults(searchValue, searchResult);
+    if(searchValue.length == 0){
+        searchResult.innerHTML = "";
+        searchResult.innerHTML += "<p class='text-center'> Results not found</p>"
+    } else{
+        //empty layers
+        allClusterLayer.clearLayers();
+        searchClusterLayer.clearLayers();
+        filterClusterLayer.clearLayers();
+        // go through element , add to new cluster layer
+        createMarkers(searchValue, searchClusterLayer);
+        searchClusterLayer.addTo(map);
+        showResults(searchValue, searchResult);
+    }
 
 })
 
