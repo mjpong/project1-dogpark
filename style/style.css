@@ -1,10 +1,11 @@
 /* font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
 
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  
 }
 
 /* all headers */
@@ -12,10 +13,18 @@ body {
 h6 {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
-
+  margin-bottom: 0px;
 }
 
-/* Nav */
+/* Nav bar*/
+
+.navbar {
+  padding-bottom: 0rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #616060;
+}
 
 .modal-title {
   font-family: 'Roboto', sans-serif;
@@ -35,19 +44,32 @@ h6 {
   font-style: italic;
   color: #616060;
   padding-bottom: 0px;
+  margin-bottom: 6px;
 }
 
 #map {
     height: 100vh;
-    /* z-index:500; */
     position: fixed;
-  }
+}
 
 .popup {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 13px;
+  font-size: 13.5px;
 }
 
+.pop-up-img {
+  width: 245px;
+  height: 150px;
+}
+
+.leaflet-popup-content p{
+  margin: 8px 0;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  padding-right: 25px;
+  padding-top: 10px;
+}
 /* Info Bar */
 
 #info-side-bar{
@@ -56,14 +78,12 @@ h6 {
   z-index: 1030;
   position: absolute;
   right: 23px;
-  top: 165px;
-
+  top: 155px;
 }
 
 #nav-filter-search {
   color: #FFA200;
 }
-
 
 #nav-filter-pools {
   color: #005DFF;
@@ -95,17 +115,10 @@ h6 {
 .pResults {
   font-size: 14px;
 }
+
 .pResults:hover {
   cursor: pointer;
   text-decoration: underline;
-}
-
-/* Small devices */
-@media (min-width: 576px) {
-  /* #smSearchResult {
-    height: 200px;
-    overflow-y: scroll;
-  } */
 }
 
 /* Medium devices (tablets, less than 992px) */
@@ -122,9 +135,13 @@ h6 {
     font-size: 12px;
   }
 
-  #pic-popup {
-    width: 250px;
+  .pop-up-img {
+    width: 225px;
     height: 125px;
+  }
+
+  .leaflet-popup-content p{
+    margin: 8px 0;
   }
   
   /* info nav bar */
@@ -166,4 +183,76 @@ h6 {
   }
 }
 
+/* Small devices */
+@media (max-width: 576px) {
+  /* for future search result area */
+  /* #smSearchResult {
+    height: 200px;
+    overflow-y: scroll;
+  } */
+
+  /* nav bar */
+
+  .navbar-light .navbar-nav .nav-link {
+    color: #616060;
+    font-size: 14px;
+  }
+  
+  h4.modal-title {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+
+  .modal-body {
+    margin-bottom: 0px;
+  }
+
+  .nav-modal-body {
+    font-size: 13.5px;
+    margin-top: 1px;
+  }
+
+  .nav-modal-btn {
+    font-size: 12px;
+  }
+
+  .close-modal-btn {
+    font-size: 20px;
+  }
+
+  hr {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+    /* popup */
+  h6 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+  }
+  
+  .popup {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 11px;
+  }
+  
+  .pop-up-img {
+    width: 200px;
+    height: 110px;
+  }
+  
+  .leaflet-popup-content p{
+    margin: 6px 0;
+  }
+
+  /* nav search bar */
+  .btn-group-sm>.btn, .btn-sm {
+    font-size: 12px;
+  }
+
+  .form-control {
+    font-size: 13px;
+  }
+}
 

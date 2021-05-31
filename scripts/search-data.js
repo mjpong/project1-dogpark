@@ -45,7 +45,6 @@ function getSearch(inputValue, allData) {
                     'type': i.type.toString().replace(/,/g, ", "),
                     'property': i.property
                 })
-
             }
         }
     }
@@ -54,21 +53,21 @@ function getSearch(inputValue, allData) {
 
 let searchClusterLayer = L.markerClusterGroup();
 let searchValue = [];
-let smSearchValue = [];
 
-//sm device
+// sm device
 smSearchBtn.addEventListener('click', function () {
     let smUserSearch = smSearchQuery.value;
-    smSearchValue = getSearch(smUserSearch, allData);
+    searchValue = getSearch(smUserSearch, allData);
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
     filterClusterLayer.clearLayers();
-    createMarkers(smSearchValue, searchClusterLayer);
+    createMarkers(searchValue, searchClusterLayer);
     searchClusterLayer.addTo(map);
-    // showResults(smSearchValue, smSearchResult);
+    // showresults() to be added in future
+    // showResults(searchValue, smSearchResult);
 })
 
-
+// md lg device
 searchBtn.addEventListener('click', function () {
     let userSearch = searchQuery.value;
     searchValue = getSearch(userSearch, allData);
@@ -89,45 +88,16 @@ searchQuery.addEventListener("keyup", function (e) {
     }
 })
 
-
-
-// function showResults(results) {
-//     searchResult.innerHTML = "";
-//     let count = 0;
-//     for (let i of results) {
-//         searchResult.innerHTML +=
-//             `<p onClick="resultZoom(${count++})" class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
-//     }
-// }
-
 function showResults(results, userResults) {
-    userResults.innerHTML ="";
+    userResults.innerHTML = "";
     let count = 0;
     for (let i of results) {
         userResults.innerHTML +=
             `<p onClick="resultZoom(${count++})" class= "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
-
     }
 }
 
-// function smShowResults(results, userResults){
-//     userResults.innerHTML ="";
-//     let count = 0;
-//     for (let i of results) {
-//         userResults.innerHTML +=
-//             `<p onCLick="smResultZoom(${count++}) class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
-
-//     }
-// }
-
-// function smResultZoom(count) {
-//     allClusterLayer.clearLayers();
-//     searchClusterLayer.clearLayers();
-//     filterClusterLayer.clearLayers();
-//     let resultLayer = createMarkers([searchValue[count]], searchClusterLayer);
-//     map.setView([searchValue[count].latitude, searchValue[count].longtitude + 0.001], 18);
-// }
-
+// when user click results it zooms in and opens popup
 function resultZoom(count) {
     allClusterLayer.clearLayers();
     searchClusterLayer.clearLayers();
@@ -140,3 +110,15 @@ function resultZoom(count) {
 }
 
 
+// WORK IN PROGRESS 
+// search bar with results on drop down, and will show on click 
+
+
+// function smShowResults(results, userResults){
+//     userResults.innerHTML ="";
+//     let count = 0;
+//     for (let i of results) {
+//         userResults.innerHTML +=
+//             `<p onCLick="smResultZoom(${count++}) class = "pResults"><i class="fas fa-paw"></i>  ${i.name} - ${i.property}, ${i.area}</p>`
+//     }
+// }

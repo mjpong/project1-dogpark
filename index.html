@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="style/style.css">
 
 
-
   <title>woofday</title>
 
 </head>
@@ -33,7 +32,7 @@
   <!-- Nav Bar -->
   <nav class="navbar navbar-light navbar-expand-md bg-white justify-content-md-center">
     <a class="navbar-brand d-md-none d-inline" href="">
-      <img src="images/woofday.jpeg" height="100" width="175" alt="">
+      <img src="images/woofday.jpeg" height="85" width="150" alt="">
     </a>
     <button class="navbar-toggler ml-1 collapsed" type="button" data-toggle="collapse"
       data-target="#navbar-supported-content" aria-controls="navbar-supported-content" aria-expanded="false"
@@ -66,13 +65,13 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="exampleModalLongTitle">About woofday</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h4 class="modal-title" id="aboutUsModalTitle">About woofday</h4>
+          <button type="button" class="close close-modal-btn" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          <p>
+        <div class="nav-modal-body">
+          <p class="modal-body">
             Our vision is to provide safe and secure environments where dog owners may exercise and bring their dogs for
             a good time! <br>
             Pool or park? We have it all covered. <br>
@@ -80,7 +79,7 @@
           </p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary nav-modal-btn" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -93,15 +92,16 @@
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" id="modal-long-title">We'd love to hear from you!</h4>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h4 class="modal-title" id="contactUsTitle">We'd love to hear from you!</h4>
+          <button type="button" class="close close-modal-btn" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
 
-        <div class="modal-body">
+        <div class="nav-modal-body">
           <form class="form-horizontal col-sm-12" name="myForm" onsubmit="return validateForm()" required>
             <div>
+              <br>
               Email: woof@woofday.com <br>
               Phone/Whatsapp: 93582245 <br>
               Contact hours: Mon - Fri, 10 am - 5 pm <br>
@@ -116,11 +116,11 @@
             <div class="form-group"><label>Contact Email</label><input class="form-control required" name="fcontact"
                 placeholder="name@email.com" data-placement="top" data-trigger="manual" type="text">
             </div>
-            <div class="form-group"><label>Message</label><textarea class="form-control" name="fmsg"
+            <div class="form-group"><label>Message</label><textarea class="form-control" name="fmessage"
                 placeholder="Your message here.." data-placement="top" data-trigger="manual"></textarea>
             </div>
             <div class="form-group">
-              <button type="submit" id="btn-submit" class="btn btn-success pull-right">
+              <button type="submit" id="btn-submit" class="btn btn-success pull-right nav-modal-btn">
                 Submit
               </button>
               <!-- <p class="help-block pull-left text-danger hide" id="form-error">&nbsp;</p> -->
@@ -129,15 +129,15 @@
         </div>
 
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary nav-modal-btn" data-dismiss="modal">Cancel</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Tagline -->
-  <div class="container-fluid ">
-    <div class="row header d-flex justify-content-center mb-0 pb-0">
+  <div class="container-fluid d-none d-md-block ">
+    <div class="row header d-flex justify-content-center pb-0">
       <p class="text-center tagline"> Find the best place to have a wooftastic day with your pup!</p>
     </div>
   </div>
@@ -155,8 +155,8 @@
         </div>
         <div id="smSearchResult" class=""></div>
       </div>
-    </div>  
-    <div class=" row filter-header mb-2">
+    </div>
+    <div class="row filter-header mb-2">
       <!-- parks btn-->
       <div class="col-6 d-flex justify-content-end">
         <button class="btn btn-warning btn-sm dropdown-toggle" id="sm-park-btn" data-toggle="modal"
@@ -175,7 +175,7 @@
               </div>
               <div class="modal-body">
                 <div class="row">
-                  <div class="col-12">
+                  <div class="col-6">
                     <p class="info-header">Region</b>
                     <div class="pt-1 filter-all">
                       <input type="checkbox" class="smParkAreaBox" value="north"> North
@@ -190,7 +190,7 @@
                       <input type="checkbox" class="smParkAreaBox" value="central"> Central
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <p class="info-header">Amenities Includes</p>
                     <div class="pt-1 filter-all">
                       <input type="checkbox" class="smParkAmenitiesBox" value="fountain"> Water Fountain
@@ -238,7 +238,7 @@
               </div>
               <div class="modal-body">
                 <div class="row">
-                  <div class="col-12">
+                  <div class="col-6">
                     <p class="info-header">Region</p>
                     <div class="pt-1 filter-all">
                       <input type="checkbox" class="smPoolAreaBox" value="north" id="pool-north"> North
@@ -254,7 +254,7 @@
                       Central
                     </div>
                   </div>
-                  <div class="col-12">
+                  <div class="col-6">
                     <p class="info-header">Type</p>
                     <div class="pt-1 filter-all">
                       <input type="checkbox" class="smPoolTypeBox" value="outdoor" id="pool-outdoor">
@@ -293,12 +293,12 @@
       </div>
     </div>
   </div>
-  <hr class="d-block d-md-none">
-  </div>
 
+  <hr class="d-block d-md-none">
 
   <!-- Map -->
-  <div id="map" class="container-fluid m-0 p-0"></div>
+  <div id="map" class="container-fluid m-0 p-0">
+  </div>
 
   <!-- Info side bar -->
   <div class="row justify-content-left d-none d-md-block">
@@ -371,10 +371,8 @@
                 <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
               </div>
             </div>
-
           </div>
         </div>
-
 
         <!-- Dog pool Tab -->
         <div class="tab-pane fade" id="nav-dogpools" role="tabpanel" aria-labelledby="nav-dogpools">
@@ -396,7 +394,6 @@
                 <div class="pt-1 filter-all">
                   <input type="checkbox" class="poolAreaBox" value="central" id="pool-central"> Central
                 </div>
-
               </div>
               <div class="col-6">
                 <p class="info-header">Type</p>
@@ -421,7 +418,6 @@
                 <button class="btn btn-reset btn-sm btn-danger border-white text-white ">Reset</button>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -451,11 +447,10 @@
           </div>
 
 
-
         </div>
 
-
       </div>
+
     </div>
   </div>
 

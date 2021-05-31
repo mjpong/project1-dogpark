@@ -1,10 +1,8 @@
-// ADDING BASE MAP
-
-// SINGAPORE LATLONG + SETVIEW CENTER POINT
+// Map - Adding base map, sg latlng, setview
 let singapore = [1.3141086427175888, 103.83809046978706];
 let map = L.map('map').setView(singapore, 12.4);
 
-// TILE LAYERS 
+// Tile Layers
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery (c) <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
@@ -15,7 +13,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 }).addTo(map);
 
 // FUNCTIONS 
-// info side bar - toggle to show
+// Info side bar - arrow toggle to hide
 document.getElementById("nav-toggle").addEventListener('click', function () {
     let isShown = false;
     for (let pane of document.querySelectorAll(".tab-pane")) {
@@ -33,12 +31,12 @@ document.getElementById("nav-toggle").addEventListener('click', function () {
 })
 
 // Modal Contact Us Submit Btn Alert
-
 let formBtn = document.getElementById('btn-submit')
 
 function validateForm() {
     let i = document.forms["myForm"]["fname"].value;
     let j = document.forms["myForm"]["fcontact"].value;
+    let k = document.forms["myForm"]["fmessage"].value;
     if (i == "") {
         alert("Name must be filled out");
         return false;
@@ -47,13 +45,17 @@ function validateForm() {
         alert("Email must be filled out");
         return false;
     }
+    if (k == ""){
+        alert("Please enter your message");
+        return false;
+    }
     else {
         alert("Thank you. Your response has been submitted.")
     }
 }
 
 
-// all reset btn to reset map
+// All reset btns to reset maps
 let resetBtns = document.querySelectorAll(".btn-reset");
 for (let btn of resetBtns) {
     btn.addEventListener('click', function () {

@@ -18,8 +18,6 @@ let allParksData = [];
 let allPoolsData = [];
 let allData;
 
-
-
 // AXIOS just to read the park data
 async function loadParksData() {
     let response = await axios.get("../json-files/parks.json");
@@ -69,28 +67,28 @@ async function loadPoolsData() {
 
 // Marker function
 function createMarkers(coor, clusterLayer) {
-    if(coor.length != null){
+    if (coor.length != null) {
         for (let i = 0; i < coor.length; i++) {
             coor[i].area
             if (coor[i].property == "Park") {
                 let parkPopup = L.popup().setContent(`
                     <h6>${coor[i].name}</h6>
                     <hr>
-                    <p class="popup"> Address: ${coor[i].address}</p>
-                    <p class="popup"> Opening Hours: ${coor[i].hours}</p>
-                    <p class="popup"> Amenities: ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
-                    <p> <img class="responsive" src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                    <p class="popup"> <b>Address:</b> ${coor[i].address}</p>
+                    <p class="popup"> <b>Opening Hours:</b> ${coor[i].hours}</p>
+                    <p class="popup"> <b>Amenities:</b> ${coor[i].amenities.toString().replace(/,/g, ", ")}</p>
+                    <p> <img class="pop-up-img" src="${coor[i].pic}"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: parkPin }).bindPopup(parkPopup).addTo(clusterLayer);
             } else {
                 let poolPopup = L.popup().setContent(`
                     <h6>${coor[i].name}</h6>
                     <hr>
-                    <p class="popup"> Address: ${coor[i].address}</p>
-                    <p class="popup"> Pool Type: ${coor[i].type.toString().replace(/,/g, ", ")}</p>
-                    <p class="popup"> Price: $${coor[i].price}</p>
-                    <p class="popup"> Opening Hours: ${coor[i].hours}</p>
-                    <p> <img class="responsive" src="${coor[i].pic}" style="width:275px; height:150px"/> 
+                    <p class="popup"> <b>Address:</b> ${coor[i].address}</p>
+                    <p class="popup"> <b>Pool Type:</b> ${coor[i].type.toString().replace(/,/g, ", ")}</p>
+                    <p class="popup"> <b>Price:<b> $${coor[i].price}</p>
+                    <p class="popup"> <b>Opening Hours:</b> ${coor[i].hours}</p>
+                    <p> <img class="pop-up-img" src="${coor[i].pic}"/> 
                     `)
                 L.marker([coor[i].latitude, coor[i].longtitude], { icon: poolPin }).bindPopup(poolPopup).addTo(clusterLayer)
             }
@@ -101,6 +99,7 @@ function createMarkers(coor, clusterLayer) {
 
 }
 
+// Filtering functions 
 function splitByArea(data) {
     let area = {
         north: [],
@@ -136,10 +135,10 @@ function splitByAmenities(data) {
 
         if (i.amenities.includes("Fountain")) {
             pAmenities["fountain"].push(i)
-        } 
+        }
         if (i.amenities.includes("Playground")) {
             pAmenities["playground"].push(i)
-        } 
+        }
         if (i.amenities.includes("Washroom")) {
             pAmenities["washroom"].push(i)
         }
@@ -157,10 +156,10 @@ function splitByPool(data) {
     for (let i of data) {
         if (i.type.includes("Outdoor Pool")) {
             pType["outdoor"].push(i)
-        } 
+        }
         if (i.type.includes("Indoor Pool")) {
             pType["indoor"].push(i)
-        } 
+        }
         if (i.type.includes("Hydrotherapy Pool")) {
             pType["hydrotherapy"].push(i)
         }
