@@ -7,7 +7,7 @@
 ### Site Owner Goals and Target Audience
 As a dog owner, it is hard to be able to easily find all the places you can bring your furry friends to play over throughout the week. Therefore came the concept behind this interactive map and finder web app, where users can easily identify the different dog parks and dog pools in Singapore, and can easily find the closest location of where they would like to go.
 
-The live demo website can be accessed here: https://quizzical-franklin-e7c99c.netlify.app/
+The live demo website can be accessed here: https://woofday.netlify.app/
 
 ## UI / UX
 ### Objectives
